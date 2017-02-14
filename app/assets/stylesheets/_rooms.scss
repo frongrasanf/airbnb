@@ -9,13 +9,16 @@ header {
 .header__container {
   list-style: none;
   padding-top: 20px;
+  color: #484848;
 
   &--common {
     float: left;
+    padding-left: 550px;
   }
 
   &--common li {
     display: inline-block;
+    padding-right: 50px;
   }
 
   &__user--new {
