@@ -9,15 +9,6 @@
 | password               | string       | NOT NULL               |
 | password_confirmation  | string       | NOT NULL               |
 
-#hostsテーブル
-
-| column                 | type         | option                          |
-|:---------------------- |:------------ |:--------------------------------|
-| name                   | string       | NOT NULL                        |
-| user_id                | integer      | NOT NULL & t.references :users  |
-
-### *roomを投稿する際にcurrent_userの情報がhostsテーブルに登録される仕様にする。
-
 #roomsテーブル
 
 | column                 | type         | option                          |
@@ -25,7 +16,7 @@
 | title                  | string       | NOT NULL                        |
 | prefecture             | string       | NOT NULL                        |
 | room_type              | string       | NOT NULL                        |
-| host_id                | integer      | NOT NULL & t.references :hosts  |
+| user_id                | integer      | NOT NULL & t.references :users  |
 
 ### *実装開始時は都道府県で登録・検索
 ### *latitude, longitudeについてはGoogle API導入時にカラム追加
@@ -46,22 +37,17 @@
 ##user
 
 has_many :bookings
-has_many :rooms, through :bookings
+has_many :rooms
 
 ##room
 
-belongs_to :hosts
+belongs_to :user
 has_many   :bookings
-
-##host
-
-has_many :rooms
-has_many :bookings, through :rooms
 
 ##booking
 
-belong_to :rooms
-belong_to :users
+belong_to :room
+belong_to :user
 
 
 
