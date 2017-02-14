@@ -52,7 +52,21 @@ section h1 {
   padding: 0 100px;
 }
 
+#language__selector {
+  height: 58px;
+  width: 176px;
+  float: left;
+}
+
+#currency__selector {
+  height: 58px;
+  width: 176px;
+  float:left;
+  clear: left;
+}
+
 .footer__container section {
+  clear: both;
   display: inline-block;
   font-weight: bold;
   width: 100px;
