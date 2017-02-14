@@ -6,6 +6,22 @@ header {
   height: 61px;
 }
 
-.header__container ul li {
+.header__container {
   list-style: none;
+
+  &--common {
+    float: left;
+  }
+
+  &--common li {
+    display: inline-block;
+  }
+
+  &__user--new {
+    float: right;
+  }
+
+  &__user--new li {
+    display: inline-block;
+  }
 }
