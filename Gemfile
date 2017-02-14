@@ -31,6 +31,9 @@ gem 'jbuilder', '~> 2.5'
 gem 'haml-rails', '~> 0.9.0'
 
 gem 'erb2haml', '~> 0.1.5'
+
+gem 'dotenv-rails', '~> 2.2'
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
