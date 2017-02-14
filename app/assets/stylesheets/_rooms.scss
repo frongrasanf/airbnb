@@ -56,11 +56,19 @@ hr {
   color: #dce0e0;
 }
 
-.footer__table__page__info {
+.footer__table {
   height: 22px;
-  li {
-    list-style: none;
-    display: inline-block;
+
+  &__company__copy {
+    float: left;
+  }
+
+  &__page__info {
+    float: right;
+    li {
+      list-style: none;
+      display: inline-block;
+    }
   }
 }
 
