@@ -10,6 +10,7 @@ header {
   list-style: none;
   padding-top: 20px;
   color: #484848;
+  font-size: 14px;
 
   &--common {
     float: left;
@@ -23,10 +24,12 @@ header {
 
   &__user--new {
     float: right;
+    padding-right: 20px;
   }
 
   &__user--new li {
     display: inline-block;
+    padding-right: 20px;
   }
 }
 
