@@ -26,7 +26,7 @@
 | column                 | type         | option                          |
 |:-----------------------|:------------ |:--------------------------------|
 | user_id                | integer      | NOT NULL & t.references :users  |
-| room_id                | string       | NOT NULL & t.references :rooms  |
+| room_id                | integer      | NOT NULL & t.references :rooms  |
 | stay_days              | integer      | NOT NULL                        |
 | check_in_date          | date         | NOT NULL                        |
 | check_out_date         | date         | NOT NULL                        |
