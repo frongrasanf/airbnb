@@ -28,11 +28,15 @@ header {
 
 section {
   height: 176px;
+  padding: 60px 100px 0 100px;
+}
+
+section h1 {
+  font-size: 48px;
 }
 
 .text__header--main {
   color: $mainPink;
-  font-size: 48px;
   font-weight: bold;
 }
 
