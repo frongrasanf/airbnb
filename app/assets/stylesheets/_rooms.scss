@@ -57,6 +57,7 @@ footer {
   padding: 0 100px;
 
   &__section {
+    font-family: BlinkMacSystemFont;
     display: inline-block;
     padding: 0 80px;
     vertical-align: top;
@@ -66,6 +67,7 @@ footer {
     }
     li {
       color: $footerGray;
+      font-size: 14px;
     }
   }
 }
