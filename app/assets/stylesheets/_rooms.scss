@@ -49,7 +49,20 @@ section h1 {
 }
 
 .footer__container {
+  border-top: 1px solid #dce0e0;
+  padding: 48px 0;
+}
+
+footer {
   padding: 0 100px;
+  section {
+    display: block;
+    clear: both;
+    display: inline-block;
+    font-weight: bold;
+    width: 100px;
+    vertical-align: top;
+  }
 }
 
 #language__selector {
@@ -63,14 +76,6 @@ section h1 {
   width: 176px;
   float:left;
   clear: left;
-}
-
-.footer__container section {
-  clear: both;
-  display: inline-block;
-  font-weight: bold;
-  width: 100px;
-  vertical-align: top;
 }
 
 hr {
