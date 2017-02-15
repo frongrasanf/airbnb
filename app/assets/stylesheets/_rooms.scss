@@ -48,8 +48,6 @@ section h1 {
   font-weight: bold;
 }
 
-
-
 footer {
   padding: 48px 0;
   border-top: 1px solid #dce0e0;
@@ -57,6 +55,19 @@ footer {
 
 .footer__container {
   padding: 0 100px;
+
+  &__section {
+    display: inline-block;
+    padding: 0 80px;
+    vertical-align: top;
+    h3 {
+      font-weight: bold;
+      padding-bottom: 15px;
+    }
+    li {
+      color: $footerGray;
+    }
+  }
 }
 
 #language__selector {
@@ -70,21 +81,6 @@ footer {
   width: 176px;
   float:left;
   clear: left;
-}
-
-footer section {
-  clear: both;
-  display: inline-block;
-}
-
-footer section h3 {
-  clear: left;
-  font-weight: bold;
-}
-
-footer section li {
-  color: $footerGray;
-  font-size: 14px;
 }
 
 hr {
