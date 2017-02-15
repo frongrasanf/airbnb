@@ -48,12 +48,14 @@ section h1 {
   font-weight: bold;
 }
 
-.footer__container {
-  border-top: 1px solid #dce0e0;
-  padding: 48px 0;
-}
+
 
 footer {
+  padding: 48px 0;
+  border-top: 1px solid #dce0e0;
+}
+
+.footer__container {
   padding: 0 100px;
 }
 
