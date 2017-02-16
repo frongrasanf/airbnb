@@ -62,6 +62,16 @@ section h1 {
   appearance: none;
 }
 
+#location__label {
+  color: #484848;
+}
+
+#location__input {
+  margin-top: 15px;
+  border: none;
+  font-family: BlinkMacSystemFont;
+}
+
 .top__rooms {
   padding: 0 100px;
   margin: 48px 0;
