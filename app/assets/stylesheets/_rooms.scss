@@ -54,10 +54,14 @@ section h1 {
   height: 100px;
   border: solid 0.5px #aaa;
   border-radius: 5px;
+  ul {
+    display: table-cell;
+  }
 }
 
 .search__form__location {
   padding: 15px;
+  width: 35%;
   list-style: none;
   appearance: none;
 }
