@@ -106,6 +106,24 @@ section h1 {
   letter-spacing: -0.5px;
 }
 
+.search__form__persons {
+  padding: 15px;
+  width: 17%;
+  list-style: none;
+  appearance: none;
+  li {
+    margin-top: 10px;
+  }
+
+  &__label {
+
+  }
+  &__select {
+    font-size: 19px;
+    margin-top: 15px;
+  }
+}
+
 .top__rooms {
   padding: 0 100px;
   margin: 48px 0;
