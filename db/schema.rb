@@ -10,12 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170214042114) do
+ActiveRecord::Schema.define(version: 20170216051332) do
 
   create_table "rooms", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.string "title",      null: false
-    t.string "prefecture", null: false
-    t.string "room_type",  null: false
+    t.string "title",                    null: false
+    t.string "prefecture",               null: false
+    t.string "room_type",                null: false
+    t.text   "image",      limit: 65535
   end
 
 end

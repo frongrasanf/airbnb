@@ -16,6 +16,7 @@
 | title                  | string       | NOT NULL                        |
 | prefecture             | string       | NOT NULL                        |
 | room_type              | string       | NOT NULL                        |
+| image                  | text         |                                 |
 | user_id                | integer      | NOT NULL & t.references :users  |
 
 ### *実装開始時は都道府県で登録・検索
