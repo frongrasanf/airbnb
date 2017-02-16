@@ -21,6 +21,11 @@
         = f.label :prefecture, value: "場所", id: "location__label"
       %li.search__form__location__input
         = f.text_field :prefecture, id: "location__input", placeholder: "行き先、都市、住所"
+    %ul.search__form__dates
+      %li.search__form__dates__label
+        = f.label :prefecture, value: "日時", id: "dates__label"
+      %li.search__form__dates__input
+        = f.text_field :prefecture, id: "dates__input", placeholder: "チェックイン➡︎チェックアウト"
 
 #top__rooms__wrapper.top__rooms
   %h3.top__rooms__index 宿泊先
