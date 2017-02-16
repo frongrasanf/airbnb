@@ -65,6 +65,7 @@ section h1 {
   width: 35%;
   list-style: none;
   appearance: none;
+  border-right: solid 0.5px #dce0e0;
 }
 
 #location__label {
@@ -77,6 +78,8 @@ section h1 {
   font-size: 19px;
   border: none;
   font-family: BlinkMacSystemFont;
+  outline: 0;
+  letter-spacing: -0.5px;
 }
 
 .search__form__dates {
@@ -84,6 +87,7 @@ section h1 {
   width: 35%;
   list-style: none;
   appearance: none;
+  border-right: solid 0.5px #dce0e0;
 }
 
 #dates__label {
@@ -92,8 +96,12 @@ section h1 {
 
 #dates__input {
   margin-top: 15px;
+  line-height: 22px;
+  font-size: 19px;
   border: none;
   font-family: BlinkMacSystemFont;
+  outline: 0;
+  letter-spacing: -0.5px;
 }
 
 .top__rooms {
