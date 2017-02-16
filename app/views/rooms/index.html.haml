@@ -14,6 +14,14 @@
   %h1.text__header--sub
     世界中の宿泊先と体験を予約。
 
+#top__room__search
+  = form_for(@room) do |f|
+    %ul.search__form__location
+      %li.search__form__location__label
+        = f.label :prefecture, value: "場所", id: "location__label"
+      %li.search__form__location__input
+        = f.text_field :prefecture, id: "location__input", placeholder: "行き先、都市、住所"
+
 #top__rooms__wrapper.top__rooms
   %h3.top__rooms__index 宿泊先
   .top__rooms__container
