@@ -73,6 +73,25 @@ section h1 {
 
 #location__input {
   margin-top: 15px;
+  line-height: 22px;
+  font-size: 19px;
+  border: none;
+  font-family: BlinkMacSystemFont;
+}
+
+.search__form__dates {
+  padding: 15px;
+  width: 35%;
+  list-style: none;
+  appearance: none;
+}
+
+#dates__label {
+  color: #484848;
+}
+
+#dates__input {
+  margin-top: 15px;
   border: none;
   font-family: BlinkMacSystemFont;
 }
