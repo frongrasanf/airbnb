@@ -64,6 +64,14 @@ section h1 {
     width: calc(100% * 1 / 3);
     float: left;
   }
+  &__info {
+      color: #484848;
+
+    &__details li {
+      list-style: none;
+      display: inline-block;
+    }
+  }
 }
 
 footer {
