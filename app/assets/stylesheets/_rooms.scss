@@ -50,13 +50,13 @@ section h1 {
 
 #top__room__search {
   margin: 48px 100px 0 100px;
-  max-width: 1080px;
+  width: 1080px;
   border: solid 0.5px #dce0e0;
   border-radius: 4px;
   box-shadow: 0 1px 3px 0 #dce0e0;
-  box-sizing: border-box;
+  display: table;
   ul {
-    display: inline-block;
+    display: table-cell;
   }
 }
 
