@@ -36,6 +36,8 @@ gem 'dotenv-rails', '~> 2.2'
 
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.1'
 
+gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
