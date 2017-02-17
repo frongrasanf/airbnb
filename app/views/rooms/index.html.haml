@@ -1,7 +1,8 @@
 %header
   .header__container
-    %ul.header__container__logo
-      = image_tag "airbnb-seeklogo.com.svg", width: "30", height: "30"
+    .header__container__logo
+      = link_to "/" do
+        = image_tag "airbnb-seeklogo.com.svg", width: "30", height: "30"
     %ul.header__container--common
       %li ホストになる
       %li ホストする時間がない方はこちら
@@ -116,5 +117,3 @@
         %i.fa.fa-facebook{ aria: { hidden: true } }
         %i.fa.fa-twitter{ aria: { hidden: true } }
         = image_tag "instagram-seeklogo.com.svg", width: "15", height: "15"
-
-
