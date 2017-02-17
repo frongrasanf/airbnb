@@ -12,6 +12,14 @@ header {
   color: #484848;
   font-size: 14px;
 
+  &__logo {
+    padding: 0 0 0 10px;
+    float:left;
+    &__top {
+      color: black;
+    }
+  }
+
   &--common {
     float: left;
     padding-left: 550px;
@@ -19,17 +27,16 @@ header {
 
   &--common li {
     display: inline-block;
-    padding-right: 50px;
+    margin: 0 15px;
   }
 
   &__user--new {
     float: right;
-    padding-right: 20px;
   }
 
   &__user--new li {
+    margin: 0 15px 0 15px;
     display: inline-block;
-    padding-right: 20px;
   }
 }
 
