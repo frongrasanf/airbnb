@@ -76,7 +76,7 @@ section h1 {
 
 #location__input {
   width: 100%;
-  padding: 8px 0;
+  padding-top: 15px;
   line-height: 22px;
   font-size: 19px;
   border: none;
@@ -116,8 +116,8 @@ section h1 {
   width: 17%;
   list-style: none;
   appearance: none;
+    color: #484848;
   li {
-    margin-top: 10px;
   }
 
   &__label {
