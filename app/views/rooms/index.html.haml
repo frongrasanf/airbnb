@@ -24,10 +24,11 @@
       %li.search__form__location__input
         = f.text_field :prefecture, id: "location__input", placeholder: "行き先、都市、住所"
     %ul.search__form__dates
-      %li.search__form__dates__label
+      .search__form__dates__label
         = f.label :prefecture, value: "日時", id: "dates__label"
-      %li.search__form__dates__input
-        = f.text_field :prefecture, id: "dates__input", placeholder: "チェックイン➡︎チェックアウト"
+      .search__form__dates__input
+        = f.text_field :prefecture, id: "checkin__dates__input", placeholder: "チェックイン"
+        = f.text_field :prefecture, id: "checkout__dates__input", placeholder: "チェックアウト"
     %ul.search__form__persons
       %li.search__form__persons__label ゲスト
       %li.search__form__persons__select 宿泊1人
