@@ -1,3 +1,11 @@
+@import "./reset";
+@import "bootstrap";
+@import "bootstrap-sprockets";
+@import "bootstrap-datetimepicker";
+@import "./variables";
+@import "./rooms";
+@import "font-awesome";
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.

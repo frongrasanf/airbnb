@@ -1,2 +1,119 @@
-%h1
-  Airbnbで一生忘れられない旅をしよう。 世界中の宿泊先と体験を予約。
+%header
+  .header__container
+    .header__container__logo
+      = link_to "/" do
+        = image_tag "airbnb-seeklogo.com.svg", width: "30", height: "30"
+    %ul.header__container--common
+      %li ホストになる
+      %li ホストする時間がない方はこちら
+      %li ヘルプ
+    %ul.header__container__user--new
+      %li アカウント作成
+      %li ログイン
+
+%section
+  %h1.text__header--main
+    Airbnbで一生忘れられない旅をしよう。
+  %h1.text__header--sub
+    世界中の宿泊先と体験を予約。
+
+#top__room__search
+  = form_for(@room) do |f|
+    %ul.search__form__location
+      %li.search__form__location__label
+        = f.label :prefecture, value: "場所", id: "location__label"
+      %li.search__form__location__input
+        = f.text_field :prefecture, id: "location__input", placeholder: "行き先、都市、住所"
+    %ul.search__form__dates
+      .search__form__dates__label
+        = f.label :prefecture, value: "日時", id: "dates__label"
+      .search__form__dates__input{ style:"position: relative" }
+        = f.text_field :prefecture, id: "checkin__dates__input", class: "datetime-picker", placeholder: "チェックイン"
+        = f.text_field :prefecture, id: "checkout__dates__input", class: "datetime-picker", placeholder: "チェックアウト"
+    %ul.search__form__persons
+      %li.search__form__persons__label ゲスト
+      %li.search__form__persons__select 宿泊1人
+    %ul.search__form__submit
+      = f.submit "探す", class: "search__form__submit__btn"
+
+#top__rooms.top__rooms
+  %h3.top__rooms__index 宿泊先
+  .top__rooms__container
+    .top__rooms__container__image
+      = image_tag 'sample1.jpg', size: '340x300'
+    .top__rooms__info
+      %ul.top__rooms__info__details
+        %li.top__rooms__info__details__price
+          $66
+        %li.top__rooms__info__details__room-type
+          個室
+      .top__rooms__info__title
+        Villa San Gennariello B&B
+      .top__rooms__info__review
+  .top__rooms__container
+    .top__rooms__container__image
+      = image_tag 'sample2.jpg', size: '340x300'
+    .top__rooms__info
+      %ul.top__rooms__info__details
+        %li.top__rooms__info__details__price
+          $66
+        %li.top__rooms__info__details__room-type
+          個室
+      .top__rooms__info__title
+        Villa San Gennariello B&B
+      .top__rooms__info__review
+  .top__rooms__container
+    .top__rooms__container__image
+      = image_tag 'sample3.jpg', size: '340x300'
+    .top__rooms__info
+      %ul.top__rooms__info__details
+        %li.top__rooms__info__details__price
+          $66
+        %li.top__rooms__info__details__room-type
+          個室
+      .top__rooms__info__title
+        Villa San Gennariello B&B
+      .top__rooms__info__review
+
+
+
+%footer
+  .footer__container
+    #language__selector.footer__container__selector
+      日本語
+    #currency__selector.footer__container__selector
+      USD
+    .footer__container__section
+      %h3 Airbnb
+      %ul.footer__container__section__company
+        %li Airbnbとは
+        %li 採用情報
+        %li プレス
+        %li ポリシー
+        %li ヘルプ
+        %li ダイバーシティ&ビロンギング
+    .footer__container__section
+      %h3 スタッフのおすすめ
+      %ul.footer__container__section__recommendation
+        %li 信頼&安全
+        %li 旅行クーポン
+        %li GET!
+        %li Airbnb Citizen
+        %li 出張
+        %li ガイドブック
+    .footer__container__section
+      %h3 ホスティング
+      %ul.footer__container__section__hosting
+        %li ホストになる理由
+        %li おもてなしの心
+        %li ホストの責任
+    %hr.footer__divider
+    .footer__table
+      .footer__table__company__copy
+      © Airbnb, Inc.
+      %ul.footer__table__page__info
+        %li 利用規約とプライバシー
+        %li サイトマップ
+        %i.fa.fa-facebook{ aria: { hidden: true } }
+        %i.fa.fa-twitter{ aria: { hidden: true } }
+        %i.fa.fa-instagram{ aria: { hidden: true } }

@@ -1,0 +1,260 @@
+html, body {
+  height: 100%;
+}
+
+header {
+  height: 61px;
+}
+
+.header__container {
+  list-style: none;
+  padding-top: 20px;
+  color: #484848;
+  font-size: 14px;
+
+  &__logo {
+    padding-left: 10px;
+    float:left;
+  }
+
+  &--common {
+    float: left;
+    padding-left: 550px;
+
+    li {
+      display: inline-block;
+      margin: 0 15px;
+    }
+  }
+
+  &__user--new {
+    float: right;
+
+    li {
+      margin: 0 15px 0 15px;
+      display: inline-block;
+    }
+  }
+}
+
+section {
+  height: 176px;
+  margin: 60px 100px 0 100px;
+}
+
+section h1 {
+  font-size: 48px;
+  color: #484848;
+}
+
+.text__header--main {
+  color: $mainPink;
+  font-weight: bold;
+}
+
+#top__room__search {
+  margin: 0 100px;
+  width: 1080px;
+  border: solid 0.5px #dce0e0;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px 0 #dce0e0;
+  display: table;
+  ul {
+    display: table-cell;
+  }
+}
+
+#top__room__search label {
+  color: #484848;
+  font-size: 15px;
+  font-weight: lighter;
+}
+
+.search__form__location {
+  vertical-align: top;
+  padding: 15px;
+  width: 35%;
+  list-style: none;
+  appearance: none;
+  border-right: solid 0.5px #dce0e0;
+}
+
+#location__input {
+  width: 100%;
+  padding-top: 15px;
+  line-height: 22px;
+  font-size: 19px;
+  border: none;
+  font-family: BlinkMacSystemFont;
+  outline: 0;
+  letter-spacing: -0.5px;
+}
+
+.search__form__dates {
+  vertical-align: top;
+  padding: 15px;
+  width: 35%;
+  list-style: none;
+  appearance: none;
+  border-right: solid 0.5px #dce0e0;
+
+  input {
+    width: 40%;
+    margin-top: 15px;
+    line-height: 22px;
+    font-size: 19px;
+    border: none;
+    font-family: BlinkMacSystemFont;
+    outline: 0;
+    letter-spacing: -0.5px;
+  }
+}
+
+#checkin__dates__input {
+  float: left;
+}
+
+#checkout__dates__input {
+  float: right;
+}
+
+.search__form__persons {
+  vertical-align: top;
+  padding: 15px;
+  width: 17%;
+  list-style: none;
+  appearance: none;
+  color: #484848;
+  li {
+  }
+
+  &__label {
+    font-size: 15px;
+  }
+  &__select {
+    font-size: 19px;
+    margin-top: 15px;
+  }
+}
+
+.search__form__submit {
+  width: 200px;
+  vertical-align: middle;
+  padding: 0 15px;
+
+  &__btn {
+    width: 100%;
+    height: 50px;
+    border-radius: 4px;
+    line-height: 16px;
+    font-size: 15px;
+    border-style: none;
+    background-color: $mainPink;
+    color: white;
+    font-size: 18px;
+  }
+}
+
+.top__rooms {
+  padding: 48px 100px;
+  min-height: 400px;
+  font-family: BlinkMacSystemFont;
+  font-size: 0;
+  &__index  {
+    color: #484848;
+    font-size: 19px;
+    line-height: 24px;
+    padding-bottom: 24px;
+  }
+  &__container {
+    display: inline-block;
+    width: calc(100% * 1 / 3);
+  }
+  &__info {
+      color: #484848;
+      font-weight: 200;
+      font-size: 14px;
+
+    &__details {
+      li {
+        margin-top: 10px;
+        font-weight: 700;
+        list-style: none;
+        display: inline-block;
+      }
+      &__price {
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+footer {
+  padding: 48px 0;
+  border-top: 1px solid #dce0e0;
+}
+
+.footer__container {
+  padding: 0 100px;
+
+  &__section {
+    vertical-align: top;
+    font-family: BlinkMacSystemFont;
+    display: inline-block;
+    width: 170px;
+    margin: 0 80px 0 40px;
+    h3 {
+      font-weight: bold;
+      font-size: 15px;
+      padding-bottom: 15px;
+      margin-top: 0;
+      vertical-align: top;
+    }
+    li {
+      color: $footerGray;
+      font-size: 14px;
+    }
+  }
+
+  &__selector {
+    height: 58px;
+    width: 176px;
+    color: #484848;
+  }
+}
+
+#language__selector {
+  float: left;
+}
+
+#currency__selector {
+  float:left;
+  clear: left;
+}
+
+hr {
+  border-width: 0.1px 0px 0px 0px;
+  border-style: solid;
+  color: #dce0e0;
+}
+
+.footer__table {
+  height: 22px;
+  color: $footerGray;
+  padding-top: 15px;
+  font-size: 15px;
+
+  &__company__copy {
+    float: left;
+  }
+
+  &__page__info {
+    float: right;
+    li {
+      list-style: none;
+      display: inline-block;
+    }
+  }
+}
+
+
