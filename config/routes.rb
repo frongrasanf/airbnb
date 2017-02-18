@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   resources :rooms do
     resources :bookings, only: %i[new create]
   end
+  resources :users, only: :show
 end
