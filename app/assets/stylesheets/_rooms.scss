@@ -20,26 +20,26 @@ header {
   &--common {
     float: left;
     padding-left: 550px;
-  }
 
-  &--common li {
-    display: inline-block;
-    margin: 0 15px;
+    li {
+      display: inline-block;
+      margin: 0 15px;
+    }
   }
 
   &__user--new {
     float: right;
-  }
 
-  &__user--new li {
-    margin: 0 15px 0 15px;
-    display: inline-block;
+    li {
+      margin: 0 15px 0 15px;
+      display: inline-block;
+    }
   }
 }
 
 section {
   height: 176px;
-  padding: 60px 100px 0 100px;
+  margin: 60px 100px 0 100px;
 }
 
 section h1 {
@@ -53,7 +53,7 @@ section h1 {
 }
 
 #top__room__search {
-  margin: 48px 100px 0 100px;
+  margin: 0 100px;
   width: 1080px;
   border: solid 0.5px #dce0e0;
   border-radius: 4px;
