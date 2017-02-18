@@ -27,9 +27,9 @@
     %ul.search__form__dates
       .search__form__dates__label
         = f.label :prefecture, value: "日時", id: "dates__label"
-      .search__form__dates__input
-        = f.text_field :prefecture, id: "checkin__dates__input", placeholder: "チェックイン"
-        = f.text_field :prefecture, id: "checkout__dates__input", placeholder: "チェックアウト"
+      .search__form__dates__input{ style:"position: relative" }
+        = f.text_field :prefecture, id: "checkin__dates__input", class: "form-control datetime-picker", placeholder: "チェックイン"
+        = f.text_field :prefecture, id: "checkout__dates__input", class: "form-control datetime-picker", placeholder: "チェックアウト"
     %ul.search__form__persons
       %li.search__form__persons__label ゲスト
       %li.search__form__persons__select 宿泊1人
