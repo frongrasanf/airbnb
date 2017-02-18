@@ -19,8 +19,28 @@
         %li ホストする時間がない方はこちら
         %li ヘルプ
       %ul.header__container__user--new
-        = link_to new_user_registration_path do
-          %li アカウント作成
+        %li.modal-open_registration アカウント作成
+        .modal-content
+          %h3 まずは登録から。１分ほどで済みます。
+          = form_for(@user, url: registration_path(@user)) do |f|
+            .form-group
+              = f.label :name
+              = f.text_field :name, class: "form-control", autofocus: true
+            .form-group
+              = f.label :email
+              = f.email_field :email, class: "form-control"
+            .form-group
+              = f.label :password
+              - if @minimum_password_length
+                %em
+                  (#{@minimum_password_length} characters minimum)
+              = f.password_field :password, class: "form-control", autocomplete: "off"
+            .form-group
+              = f.label :password_confirmation
+              = f.password_field :password_confirmation, class: "form-control", autocomplete: "off"
+            .form-group
+              = f.submit "サインアップ", class: "btn btn-pink"
+          .modal-close 閉じる
         = link_to new_user_session_path do
           %li ログイン
 
