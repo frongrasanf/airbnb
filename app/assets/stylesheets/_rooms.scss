@@ -64,6 +64,12 @@ section h1 {
   }
 }
 
+#top__room__search label {
+  color: #484848;
+  font-size: 15px;
+  font-weight: lighter;
+}
+
 .search__form__location {
   vertical-align: top;
   padding: 15px;
@@ -71,12 +77,6 @@ section h1 {
   list-style: none;
   appearance: none;
   border-right: solid 0.5px #dce0e0;
-}
-
-#location__label {
-  color: #484848;
-  font-size: 15px;
-  font-weight: lighter;
 }
 
 #location__input {
@@ -97,36 +97,25 @@ section h1 {
   list-style: none;
   appearance: none;
   border-right: solid 0.5px #dce0e0;
-}
 
-#dates__label {
-  color: #484848;
-  font-size: 15px;
-  font-weight: lighter;
+  input {
+    width: 40%;
+    margin-top: 15px;
+    line-height: 22px;
+    font-size: 19px;
+    border: none;
+    font-family: BlinkMacSystemFont;
+    outline: 0;
+    letter-spacing: -0.5px;
+  }
 }
 
 #checkin__dates__input {
   float: left;
-  width: 40%;
-  margin-top: 15px;
-  line-height: 22px;
-  font-size: 19px;
-  border: none;
-  font-family: BlinkMacSystemFont;
-  outline: 0;
-  letter-spacing: -0.5px;
 }
 
 #checkout__dates__input {
   float: right;
-  width: 40%;
-  margin-top: 15px;
-  line-height: 22px;
-  font-size: 19px;
-  border: none;
-  font-family: BlinkMacSystemFont;
-  outline: 0;
-  letter-spacing: -0.5px;
 }
 
 .search__form__persons {
