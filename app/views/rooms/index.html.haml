@@ -20,7 +20,7 @@
         %li ヘルプ
       %ul.header__container__user--new
         %li.modal-open_registration アカウント作成
-        .modal-content
+        #modal__new.modal-content
           %h3 まずは登録から。１分ほどで済みます。
           = form_for(@user, url: registration_path(@user)) do |f|
             .form-group
@@ -41,8 +41,23 @@
             .form-group
               = f.submit "サインアップ", class: "btn btn-pink"
           .modal-close 閉じる
-        = link_to new_user_session_path do
-          %li ログイン
+        %li.modal-open_login ログイン
+        #modal__login.modal-content
+          %h3 メールアドレスと
+          %h3 パスワードを入力してください。
+          = form_for(@user, url: new_user_session_path(@user)) do |f|
+            .form-group
+              = f.label :email
+              = f.email_field :email, class: "form-control", autofocus: true
+            .form-group
+              = f.label :password
+              - if @minimum_password_length
+                %em
+                  (#{@minimum_password_length} characters minimum)
+              = f.password_field :password, class: "form-control", autocomplete: "off"
+            .form-group
+              = f.submit "サインイン", class: "btn btn-pink"
+          .modal-close 閉じる
 
 %section
   %h1.text__header--main
