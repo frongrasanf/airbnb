@@ -8,8 +8,10 @@
       %li ホストする時間がない方はこちら
       %li ヘルプ
     %ul.header__container__user--new
-      %li アカウント作成
-      %li ログイン
+      = link_to new_user_registration_path do
+        %li アカウント作成
+      = link_to new_user_session_path do
+        %li ログイン
 
 %section
   %h1.text__header--main
