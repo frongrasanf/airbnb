@@ -215,21 +215,21 @@ footer {
       font-size: 14px;
     }
   }
+
+  &__selector {
+    height: 58px;
+    width: 176px;
+    color: #484848;
+  }
 }
 
 #language__selector {
-  height: 58px;
-  width: 176px;
   float: left;
-  color: #484848;
 }
 
 #currency__selector {
-  height: 58px;
-  width: 176px;
   float:left;
   clear: left;
-  color: #484848;
 }
 
 hr {
