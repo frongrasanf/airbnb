@@ -9,9 +9,15 @@
       %li 旅行
       %li メッセージ
       %li ヘルプ
-    %ul.header__container__user--new
-      = link_to destroy_user_session_path do
-        %li サインアウト
+    .dropdown
+      %a{ src: "#", data: { toggle: "dropdown", type:  "button" } }
+        名前
+        %span.caret
+      %ul.dropdown-menu
+        %li
+        = link_to "a", "users/#{ current_user.id }"
+        %li
+        = link_to "b", destroy_user_session_path
   - else
     %ul.header__container--common
       %li ホストになる
