@@ -5,8 +5,10 @@
         = image_tag "airbnb-seeklogo.com.svg", width: "30", height: "30"
     - if user_signed_in?
       %ul.header__container--common
-        %li ホストになる
         %li ホストする時間がない方はこちら
+        %li ホスト
+        %li 旅行
+        %li メッセージ
         %li ヘルプ
       %ul.header__container__user--new
         = link_to destroy_user_session_path do
