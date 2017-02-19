@@ -28,22 +28,22 @@
       %li.modal-open_registration アカウント作成
       #modal__new.modal-content
         %h3 まずは登録から。１分ほどで済みます。
-        = form_for(@user, url: registration_path(@user), html: { role: "form", data: { toggle: "validator" } }) do |f|
+        = form_for(@user, url: registration_path(@user)) do |f|
           .form-group
             = f.label :name
             = f.text_field :name, class: "form-control", autofocus: true, required: true
           .form-group
             = f.label :email
-            = f.email_field :email, class: "form-control"
+            = f.email_field :email, class: "form-control", required: true
           .form-group
             = f.label :password
             - if @minimum_password_length
               %em
                 (#{@minimum_password_length} characters minimum)
-            = f.password_field :password, class: "form-control", autocomplete: "off"
+            = f.password_field :password, class: "form-control", autocomplete: "off", type: "password", minlength: 6, required: true
           .form-group
             = f.label :password_confirmation
-            = f.password_field :password_confirmation, class: "form-control", autocomplete: "off"
+            = f.password_field :password_confirmation, class: "form-control", autocomplete: "off", minlength: 6, required: true
           .form-group
             = f.submit "サインアップ", class: "btn btn-pink"
         .modal-close 閉じる
