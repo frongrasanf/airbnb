@@ -28,10 +28,10 @@
       %li.modal-open_registration アカウント作成
       #modal__new.modal-content
         %h3 まずは登録から。１分ほどで済みます。
-        = form_for(@user, url: registration_path(@user)) do |f|
+        = form_for(@user, url: registration_path(@user), html: { role: "form", data: { toggle: "validator" } }) do |f|
           .form-group
             = f.label :name
-            = f.text_field :name, class: "form-control", autofocus: true
+            = f.text_field :name, class: "form-control", autofocus: true, required: true
           .form-group
             = f.label :email
             = f.email_field :email, class: "form-control"
