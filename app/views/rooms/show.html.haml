@@ -3,6 +3,14 @@
 
 .main
   = image_tag 'sample1.jpg', class: "main__image"
+  .main__room
+    %ul.main__room__navi
+      %li.main__room__navi__overview 概要
+      %li.main__room__navi__reviews レビュー
+      %li.main__room__navi__owner ホストについて
+      %li.main__room__navi__location 所在地
+
+    .main__room__owner Alex
 
 %footer
   = render "layouts/footer"
