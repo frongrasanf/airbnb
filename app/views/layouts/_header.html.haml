@@ -11,7 +11,7 @@
       %li ヘルプ
     .header__container__user--exist.dropdown
       %a{ src: "#", data: { toggle: "dropdown", type:  "button" } }
-        名前
+        = current_user.name
         %span.caret
       %ul.dropdown-menu
         %li
