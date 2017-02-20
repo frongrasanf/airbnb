@@ -6,5 +6,14 @@
   %br/
   さあ、一緒にホスティングの準備を始めましょう。
 
+  = form_for(@room) do |f|
+    = f.label :title
+    = f.text_field :title
+    = f.label :room_type
+    = f.text_field :room_type
+    = f.label :prefecture
+    = f.text_field :prefecture
+    = f.submit "投稿する"
+
 %footer
   = render "layouts/footer"

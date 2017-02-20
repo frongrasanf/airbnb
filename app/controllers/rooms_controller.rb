@@ -5,6 +5,10 @@ class RoomsController < ApplicationController
     @user = User.new
   end
 
+  def new
+    @room = Room.new
+  end
+
   def show
     @room = Room.find(params[:id])
     @user = User.new
