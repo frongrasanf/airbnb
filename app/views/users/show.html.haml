@@ -1,6 +1,18 @@
 = render "layouts/header"
 
-= link_to "リスティングを作成する", new_room_path
+
+.user__navi
+  %ul.user__navi__menu
+    %li.user__navi__manu__dashbord ダッシュボード
+    %li.user__navi__manu__mailbox 受信トレイ
+    %li.user__navi__manu__listing リスティング
+    %li.user__navi__manu__travel 旅行
+    %li.user__navi__manu__profile プロフィール
+    %li.user__navi__manu__account アカウント
+    %li.user__navi__manu__promo 旅行クーポンGET!
+
+.user__action
+  = link_to "リスティングを作成する", new_room_path
 
 %footer
   = render "layouts/footer"

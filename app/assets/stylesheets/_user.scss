@@ -1,0 +1,18 @@
+.user__navi {
+  width: 100%;
+  background-color: #484848;
+  color: white;
+  margin-top: 40px;
+  height: 40px;
+
+  &__menu {
+    padding-left: 150px;
+
+
+    li {
+      list-style: none;
+      display: inline-block;
+      margin: 10px 20px 10px 0;
+    }
+  }
+}
