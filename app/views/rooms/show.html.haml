@@ -41,5 +41,10 @@
     %br/
     .room__details__listing__contact ホストに連絡
 
+  .room__location
+    .room__location__title エリア
+    .room__location__details
+      %p #{ @room.user.name }さんの家は、#{ @room.prefecture }にあります！
+
 %footer
   = render "layouts/footer"
