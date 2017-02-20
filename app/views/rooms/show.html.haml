@@ -13,17 +13,22 @@
 
       %ul.room__container__info__detail
         %li.room__container__info__detail__owner Alex
-        %li.room__container__info__detail__title Functional loft with green terrace
-        %li.room__container__info__detail__location メキシコシティ, Federal District, メキシコ
+        %li.room__container__info__detail__title
+          = @room.title
+        %li.room__container__info__detail__location
+          = @room.prefecture
 
     .room__container__booking
       %ul.room__container__booking__upper
         %li.room__container__booking__upper__price $82
         %li.room__container__booking__upper__night /泊
       %ul.room__container__booking__lower
-        %li.room__container__booking__lower__dates
-        %li.room__container__booking__lower__persons
-        %li.room__container__booking__lower__submit 予約をリクエスト
+        = form_for(@room) do |f|
+          %li.room__container__booking__lower__dates
+          = f.text_field :prefecture, value: "yyyy/mm/dd"
+          = f.text_field :prefecture, value: "yyyy/mm/dd"
+          %li.room__container__booking__lower__persons
+          %li.room__container__booking__lower__submit 予約をリクエスト
 
 %footer
   = render "layouts/footer"
