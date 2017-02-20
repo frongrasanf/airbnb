@@ -11,8 +11,10 @@
     %li.user__navi__manu__account アカウント
     %li.user__navi__manu__promo 旅行クーポンGET!
 
-.user__action
-  = link_to "リスティングを作成する", new_room_path
+
+.user__main
+  .user__main__action
+    = link_to "リスティングを作成する", new_room_path
 
 %footer
   = render "layouts/footer"
