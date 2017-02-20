@@ -286,10 +286,10 @@ hr {
 
   &__container {
     padding: 60px 100px;
+    border-bottom: 1px solid #dce0e0;
 
     &__info {
       width: calc(100% * 2 / 3);
-      float: left;
 
       &__navi {
         border-bottom: solid 1px #dbdbdb;
@@ -311,9 +311,20 @@ hr {
         content: "";
         clear: left;
 
+        &__owner {
+          float: left;
+          font-size: 40px;
+        }
+
         &__title {
           font-size: 24px;
           font-family: BlinkMacSystemFont;
+          color: #484848;
+          float: right;
+        }
+
+        &__location {
+          float: right;
         }
       }
     }
