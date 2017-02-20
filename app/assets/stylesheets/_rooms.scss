@@ -27,12 +27,22 @@ header {
     }
   }
 
+  &__user--exist {
+    float: right;
+    margin-right: 50px;
+
+    a ul li {
+      color: #484848;
+    }
+  }
+
   &__user--new {
     float: right;
 
     li {
       margin: 0 15px 0 15px;
       display: inline-block;
+      cursor: pointer;
     }
   }
 }

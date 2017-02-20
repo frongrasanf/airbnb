@@ -1,0 +1,66 @@
+.header__container
+  .header__container__logo
+    = link_to "/" do
+      = image_tag "airbnb-seeklogo.com.svg", width: "30", height: "30"
+  - if user_signed_in?
+    %ul.header__container--common
+      %li ホストする時間がない方はこちら
+      %li ホスト
+      %li 旅行
+      %li メッセージ
+      %li ヘルプ
+    .header__container__user--exist.dropdown
+      %a{ src: "#", data: { toggle: "dropdown", type:  "button" } }
+        名前
+        %span.caret
+      %ul.dropdown-menu
+        %li
+        = link_to "マイページ", "users/#{ current_user.id }"
+        %li.divider
+        %li
+        = link_to "サインアウト", destroy_user_session_path
+  - else
+    %ul.header__container--common
+      %li ホストになる
+      %li ホストする時間がない方はこちら
+      %li ヘルプ
+    %ul.header__container__user--new
+      %li.modal-open_registration アカウント作成
+      #modal__new.modal-content
+        %h3 まずは登録から。１分ほどで済みます。
+        = form_for(@user, url: registration_path(@user)) do |f|
+          .form-group
+            = f.label :name
+            = f.text_field :name, class: "form-control", autofocus: true, required: true
+          .form-group
+            = f.label :email
+            = f.email_field :email, class: "form-control", required: true
+          .form-group
+            = f.label :password
+            - if @minimum_password_length
+              %em
+                (#{@minimum_password_length} characters minimum)
+            = f.password_field :password, class: "form-control", autocomplete: "off", type: "password", minlength: 6, required: true
+          .form-group
+            = f.label :password_confirmation
+            = f.password_field :password_confirmation, class: "form-control", autocomplete: "off", minlength: 6, required: true
+          .form-group
+            = f.submit "サインアップ", class: "btn btn-pink"
+        .modal-close 閉じる
+      %li.modal-open_login ログイン
+      #modal__login.modal-content
+        %h3 メールアドレスと
+        %h3 パスワードを入力してください。
+        = form_for(@user, url: new_user_session_path(@user)) do |f|
+          .form-group
+            = f.label :email
+            = f.email_field :email, class: "form-control", autofocus: true
+          .form-group
+            = f.label :password
+            - if @minimum_password_length
+              %em
+                (#{@minimum_password_length} characters minimum)
+            = f.password_field :password, class: "form-control", autocomplete: "off"
+          .form-group
+            = f.submit "サインイン", class: "btn btn-pink"
+        .modal-close 閉じる

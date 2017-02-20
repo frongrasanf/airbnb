@@ -1,0 +1,39 @@
+.modal-open_registration {
+  cursor: pointer;
+}
+
+.modal-content {
+  padding: 20px;
+  border: none;
+  background: #fff;
+  z-index: 2;
+  position: fixed;
+  display: none;
+  h3 {
+    color: $footerGray;
+    font-family: BlinkMacSystemFont;
+  }
+}
+
+.btn.btn-pink {
+  border: solid 0.1px $mainPink;
+  background-color: #fff;
+  color: $mainPink;
+}
+
+#modal-overlay {
+  z-index: 1;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.modal-close {
+  float: left;
+  cursor: pointer;
+  border-bottom: solid 0.1px $footerGray;
+}
