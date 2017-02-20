@@ -12,7 +12,8 @@
         %li.main__room__navi__location 所在地
 
       %ul.room__container__info__detail
-        %li.room__container__info__detail__owner Alex
+        %li.room__container__info__detail__owner
+          = @room.user.name
         %li.room__container__info__detail__title
           = @room.title
         %li.room__container__info__detail__location
