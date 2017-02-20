@@ -360,6 +360,23 @@ hr {
       }
     }
   }
+
+  &__details {
+    padding: 60px 100px;
+    width: calc(100% * 2 / 3);
+
+    &__listing__title {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    &__listing__contact {
+      margin-top: 20px;
+      color: #008489;
+      font-weight: bold;
+    }
+  }
 }
 
 
