@@ -203,6 +203,9 @@ section h1 {
 footer {
   padding: 48px 0;
   border-top: 1px solid #dce0e0;
+  clear: both;
+  content: "";
+  display: lock;
 }
 
 .footer__container {
@@ -282,11 +285,11 @@ hr {
   }
 
   &__room {
-    width: 100%;
-    padding: 50px 100px;
+    padding: 50px 0 50px 100px;
+    width: calc(100% * 2 / 3);
+    float: left;
 
     &__navi {
-      width: calc(100% * 2 / 3);
       border-bottom: solid 1px #dbdbdb;
       padding-bottom: 10px;
 
@@ -299,10 +302,6 @@ hr {
       }
     }
 
-    &__owner {
-      float: left;
-    }
-
     &__info {
       margin-left: 100px;
 
@@ -310,6 +309,11 @@ hr {
         font-size: 24px;
         font-family: BlinkMacSystemFont;
       }
+    }
+
+  &__booking {
+      width: calc(100% * 1 / 3);
+      float: right;
     }
   }
 }
