@@ -1,29 +1,29 @@
 %header
   = render "layouts/header"
 
-.main
-  = image_tag 'sample1.jpg', class: "main__image"
-  .main__room
-    %ul.main__room__navi
-      %li.main__room__navi__overview 概要
-      %li.main__room__navi__reviews レビュー
-      %li.main__room__navi__owner ホストについて
-      %li.main__room__navi__location 所在地
+.room
+  = image_tag 'sample1.jpg', class: "room__image"
+  .room__container
+    .room__container__info
+      %ul.room__container__info__navi
+        %li.main__room__navi__overview 概要
+        %li.main__room__navi__reviews レビュー
+        %li.main__room__navi__owner ホストについて
+        %li.main__room__navi__location 所在地
 
-    .main__room__owner Alex
+      %ul.room__container__info__detail
+        %li.room__container__info__detail__owner Alex
+        %li.room__container__info__detail__title Functional loft with green terrace
+        %li.room__container__info__detail__location メキシコシティ, Federal District, メキシコ
 
-    %ul.main__room__info
-      %li.main__room__info__title Functional loft with green terrace
-      %li.main__room__info__location メキシコシティ, Federal District, メキシコ
-
-  .main__booking
-    %ul.main__booking__upper
-      %li.main__booking__upper__price $82
-      %li.main__booking__upper__night /泊
-    %ul.main__booking__lower
-      %li.main__booking__lower__dates
-      %li.main__booking__lower__persons
-      %li.main__booking__lower__submit 予約をリクエスト
+    .room__container__booking
+      %ul.room__container__booking__upper
+        %li.room__container__booking__upper__price $82
+        %li.room__container__booking__upper__night /泊
+      %ul.room__container__booking__lower
+        %li.room__container__booking__lower__dates
+        %li.room__container__booking__lower__persons
+        %li.room__container__booking__lower__submit 予約をリクエスト
 
 %footer
   = render "layouts/footer"
