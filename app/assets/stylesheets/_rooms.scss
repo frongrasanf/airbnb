@@ -377,6 +377,23 @@ hr {
       font-weight: bold;
     }
   }
+
+  &__location {
+    border-top: 1px solid #dce0e0;
+    margin-bottom: 100px;
+
+    &__title {
+      margin: 20px 100px;
+      padding-bottom: 10px;
+      font-size: 18px;
+      font-weight: bold;
+      border-bottom: 1px solid #dce0e0;
+    }
+
+    &__details {
+      padding: 0 100px;
+    }
+  }
 }
 
 .room__new {
