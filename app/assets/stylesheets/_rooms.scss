@@ -298,6 +298,19 @@ hr {
         margin-right: 50px;
       }
     }
+
+    &__owner {
+      float: left;
+    }
+
+    &__info {
+      margin-left: 100px;
+
+      &__title {
+        font-size: 24px;
+        font-family: BlinkMacSystemFont;
+      }
+    }
   }
 }
 
