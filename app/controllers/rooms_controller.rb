@@ -4,4 +4,8 @@ class RoomsController < ApplicationController
     @rooms = Room.all
     @user = User.new
   end
+
+  def show
+    @room = Room.find(params[:id])
+  end
 end
