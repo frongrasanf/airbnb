@@ -14,7 +14,8 @@
 
 .user__main
   = link_to "新しいリスティングを作成する", new_room_path, class: "user__main__create"
-  .user__main__right
+  .user__main__rooms
+    .user__main__rooms__index リスティングはまだありません！
     - @rooms.each do |room|
       = room.title
       %img{ src: room.image }
