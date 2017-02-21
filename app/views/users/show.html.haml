@@ -13,8 +13,7 @@
 
 
 .user__main
-  .user__main__left
-    = link_to "リスティングを作成する", new_room_path
+  = link_to "新しいリスティングを作成する", new_room_path, class: "user__main__create"
   .user__main__right
     - @rooms.each do |room|
       = room.title
