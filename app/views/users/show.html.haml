@@ -16,5 +16,8 @@
   .user__main__left
     = link_to "リスティングを作成する", new_room_path
   .user__main__right
+    - @rooms.each do |room|
+      = room.title
+      %img{ src: room.image }
 %footer
   = render "layouts/footer"
