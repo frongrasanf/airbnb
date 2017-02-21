@@ -46,6 +46,8 @@ gem 'devise', '~> 4.2'
 
 gem 'carrierwave', '~> 1.0'
 
+gem 'fog', '~> 1.38'
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
