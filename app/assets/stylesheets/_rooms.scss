@@ -180,6 +180,11 @@ section h1 {
   &__container {
     display: inline-block;
     width: calc(100% * 1 / 3);
+
+    &__image {
+      height: 230px;
+      width: 350px;
+    }
   }
   &__info {
       color: #484848;

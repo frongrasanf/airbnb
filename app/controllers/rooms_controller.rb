@@ -1,7 +1,7 @@
 class RoomsController < ApplicationController
   def index
     @room = Room.new
-    @rooms = Room.all
+    @rooms = Room.order('id DESC').limit(3)
     @user = User.new
   end
 
