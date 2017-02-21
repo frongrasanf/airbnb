@@ -29,12 +29,11 @@
 #top__rooms.top__rooms
   %h3.top__rooms__index 宿泊先
   - @rooms.each do |room|
-    .top__rooms__container
+    = link_to room_path(room), class: "top__rooms__container" do
       %img{ src: room.image, class: "top__rooms__container__image" }
       .top__rooms__info
         %ul.top__rooms__info__details
-          %li.top__rooms__info__details__price
-            $66
+          %li.top__rooms__info__details__price $66
           %li.top__rooms__info__details__room-type
             = room.room_type
         .top__rooms__info__title
