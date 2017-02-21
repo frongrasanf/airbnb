@@ -2,7 +2,7 @@
   = render "layouts/header"
 
 .room
-  = image_tag 'sample1.jpg', class: "room__image"
+  %img{ src: @room.image, class: "room__image" }
   .room__container
     .room__container__info
       %ul.room__container__info__navi
