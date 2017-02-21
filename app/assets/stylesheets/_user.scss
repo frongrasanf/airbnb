@@ -45,5 +45,19 @@
       font-size: 24px;
       margin: 0 30px;
     }
+
+    &__container {
+      margin: 0 30px;
+      float: left;
+
+      &__image {
+        height: 230px;
+        width: 350px;
+      }
+    }
+
+    &__bookings {
+      float: right;
+    }
   }
 }
