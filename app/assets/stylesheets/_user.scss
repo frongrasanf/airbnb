@@ -1,0 +1,63 @@
+.user__navi {
+  width: 100%;
+  background-color: #484848;
+  color: white;
+  margin-top: 40px;
+  height: 40px;
+
+  &__menu {
+    padding-left: 150px;
+
+
+    li {
+      list-style: none;
+      display: inline-block;
+      margin: 10px 20px 10px 0;
+    }
+  }
+}
+
+.user__main {
+  padding: 50px 150px;
+  width: 100%;
+
+  &__create {
+    float: left;
+    width: calc(100% * 1 / 5 );
+    background-color: $mainPink;
+    padding: 15px;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    &:hover {
+      color: white;
+      text-decoration: none;
+      opacity: 0.8;
+    }
+  }
+
+  &__rooms {
+    float: right;
+    width: calc(100% * 4 / 5);
+
+    &__index {
+      font-size: 24px;
+      margin: 0 30px;
+    }
+
+    &__container {
+      margin: 0 30px;
+      float: left;
+
+      &__image {
+        height: 230px;
+        width: 350px;
+      }
+    }
+
+    &__bookings {
+      float: right;
+    }
+  }
+}

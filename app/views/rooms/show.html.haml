@@ -1,0 +1,50 @@
+%header
+  = render "layouts/header"
+
+.room
+  %img{ src: @room.image, class: "room__image" }
+  .room__container
+    .room__container__info
+      %ul.room__container__info__navi
+        %li.main__room__navi__overview 概要
+        %li.main__room__navi__reviews レビュー
+        %li.main__room__navi__owner ホストについて
+        %li.main__room__navi__location 所在地
+
+      %ul.room__container__info__detail
+        %li.room__container__info__detail__owner
+          = @room.user.name
+        %li.room__container__info__detail__title
+          = @room.title
+        %li.room__container__info__detail__location
+          = @room.prefecture
+
+    .room__container__booking
+      %ul.room__container__booking__upper
+        %li.room__container__booking__upper__price $82
+        %li.room__container__booking__upper__night /泊
+      %ul.room__container__booking__lower
+        = form_for(@room) do |f|
+          %li.room__container__booking__lower__dates
+          = f.text_field :prefecture, value: "yyyy/mm/dd"
+          = f.text_field :prefecture, value: "yyyy/mm/dd"
+          %li.room__container__booking__lower__persons
+          %li.room__container__booking__lower__submit 予約をリクエスト
+
+  .room__details
+    .room__details__listing__title リスティングについて
+    .room__details__listing__content Please notice two things before you book
+    %br/
+    1) Our apartment is on the 5th floor without elevator
+    %br/
+    2) A Metro station is being build outside at the moment. This means noise, especially when you have the windows and doors open.
+    %br/
+    .room__details__listing__contact ホストに連絡
+
+  .room__location
+    .room__location__title エリア
+    .room__location__details
+      %p #{ @room.user.name }さんの家は、#{ @room.prefecture }にあります！
+
+%footer
+  = render "layouts/footer"

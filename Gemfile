@@ -44,6 +44,12 @@ gem 'bootstrap3-datetimepicker-rails', '~> 4.17', '>= 4.17.43'
 
 gem 'devise', '~> 4.2'
 
+gem 'carrierwave', '~> 1.0'
+
+gem 'fog', '~> 1.38'
+
+gem 'rmagick', '~> 2.16'
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
@@ -59,6 +65,7 @@ end
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+  gem 'pry-rails', '~> 0.3.5'
 end
 
 group :development do

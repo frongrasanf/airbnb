@@ -28,42 +28,17 @@
 
 #top__rooms.top__rooms
   %h3.top__rooms__index 宿泊先
-  .top__rooms__container
-    .top__rooms__container__image
-      = image_tag 'sample1.jpg', size: '340x300'
-    .top__rooms__info
-      %ul.top__rooms__info__details
-        %li.top__rooms__info__details__price
-          $66
-        %li.top__rooms__info__details__room-type
-          個室
-      .top__rooms__info__title
-        Villa San Gennariello B&B
-      .top__rooms__info__review
-  .top__rooms__container
-    .top__rooms__container__image
-      = image_tag 'sample2.jpg', size: '340x300'
-    .top__rooms__info
-      %ul.top__rooms__info__details
-        %li.top__rooms__info__details__price
-          $66
-        %li.top__rooms__info__details__room-type
-          個室
-      .top__rooms__info__title
-        Villa San Gennariello B&B
-      .top__rooms__info__review
-  .top__rooms__container
-    .top__rooms__container__image
-      = image_tag 'sample3.jpg', size: '340x300'
-    .top__rooms__info
-      %ul.top__rooms__info__details
-        %li.top__rooms__info__details__price
-          $66
-        %li.top__rooms__info__details__room-type
-          個室
-      .top__rooms__info__title
-        Villa San Gennariello B&B
-      .top__rooms__info__review
+  - @rooms.each do |room|
+    = link_to room_path(room), class: "top__rooms__container" do
+      %img{ src: room.image, class: "top__rooms__container__image" }
+      .top__rooms__info
+        %ul.top__rooms__info__details
+          %li.top__rooms__info__details__price $66
+          %li.top__rooms__info__details__room-type
+            = room.room_type
+        .top__rooms__info__title
+          = room.title
+        .top__rooms__info__review
 
 %footer
   = render "layouts/footer"

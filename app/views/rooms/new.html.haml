@@ -1,0 +1,35 @@
+= render "layouts/header"
+
+
+.room__new
+  %h3 #{ current_user.name } さん、こんにちは！
+  %br/
+  %h3 さあ、一緒にホスティングの準備を始めましょう。
+  %br/
+  %h4 お部屋のタイプは？
+  %br/
+
+  = form_for(@room) do |f|
+    .form-group
+      .row
+        .col-md-4
+          = f.select :room_type, ["個室", "まるまる貸切"], {}, class: "form-control"
+    .form-group
+      .row
+        .col-md-4
+          = f.text_field :prefecture, class: "form-control", placeholder: "都道府県を入力してください"
+    .form-group
+      = f.label :title, "お部屋にタイトルをつけましょう"
+      .row
+        .col-md-4
+          = f.text_field :title, class: "form-control", placeholder: "タイトルをつけてください"
+    .form-group
+      = f.label :image, "写真を載せましょう"
+      .row
+        .col-md-4
+          = f.file_field :image
+    .form-group
+      = f.submit "投稿する", class: "btn btn-green"
+
+%footer
+  = render "layouts/footer"

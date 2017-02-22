@@ -13,6 +13,7 @@
 !/log/.keep
 !/tmp/.keep
 /app/assets/images
+/.env
 
 # Ignore Byebug command history file.
 .byebug_history
