@@ -24,10 +24,11 @@
         %li.room__container__booking__upper__price $82
         %li.room__container__booking__upper__night /泊
       %ul.room__container__booking__lower
-        = form_for(@room) do |f|
+        = form_for([@room, @booking]) do |f|
           %li.room__container__booking__lower__dates
-          = f.text_field :prefecture, value: "yyyy/mm/dd"
-          = f.text_field :prefecture, value: "yyyy/mm/dd"
+          = f.date_select :check_in_date
+          = f.date_select :check_out_date
+          = f.submit
           %li.room__container__booking__lower__persons
           %li.room__container__booking__lower__submit 予約をリクエスト
 
