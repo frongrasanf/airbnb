@@ -1,8 +1,12 @@
 class BookingsController < ApplicationController
   def create
+    user = current_user
     booking = Booking.new(booking_params)
+    room_id = booking.room_id
     if booking.save
-      redirect_to root_path
+      redirect_to user_path(user)
+    else
+      redirect_to room_path(room_id)
     end
   end
 
