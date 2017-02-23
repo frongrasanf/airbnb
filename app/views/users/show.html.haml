@@ -18,16 +18,16 @@
     .user__main__rooms__index リスティング一覧
     - @rooms.each do |room|
       .user__room__container
+        .user__room__container__room
         = link_to room_path(room) do
-          %img{ src: room.image, class: "user__room__container__image" }
-        .user__room__container__info
-          %ul.user__room__container__info__details
-            %li.user__room__container__info__details__price $66
-            %li.user__room__container__info__details__type
-              = room.room_type
-          .user__room__container__info__title
+          %img{ src: room.image, class: "user__room__container__room__image" }
+        %ul.user__room__container__room__info
+          %li.user__room__container__room__info__price $66
+          %li.user__room__container__room__info__type
+            = room.room_type
+          .user__room__container__room__info__title
             = room.title
-          .user__room__container__info__review
+          .user__room__container__room__info__review
 
 
 
