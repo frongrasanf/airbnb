@@ -61,8 +61,28 @@
 
 .user__room__container {
   margin: 0 30px;
-}
 
+  &__room {
+    float: left;
+
+    &__image {
+      height: 230px;
+      width: 350px;
+    }
+
+    &__info {
+      clear: both;
+      content: "";
+      display: block;
+
+      li {
+        display: inline-block;
+        margin: 10px 0;
+        font-weight: 700;
+      }
+    }
+  }
+}
 .user__booking__container {
   margin: 0 30px;
 
