@@ -29,9 +29,8 @@
             = f.hidden_field :room_id, value: params[:id]
             = f.text_field :check_in_date, class: "datetime-picker"
             = f.text_field :check_out_date, class: "datetime-picker"
-            = f.submit
+            = f.submit "予約をリクエスト"
           %li.room__container__booking__lower__persons
-          %li.room__container__booking__lower__submit 予約をリクエスト
 
   .room__details
     .room__details__listing__title リスティングについて
