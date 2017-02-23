@@ -38,26 +38,94 @@
   }
 
   &__rooms {
+    @include clearfix();
     float: right;
     width: calc(100% * 4 / 5);
 
     &__index {
       font-size: 24px;
-      margin: 0 30px;
+      margin: 0 30px 30px 30px
     }
 
-    &__container {
-      margin: 0 30px;
-      float: left;
+    &__nothing {
+      font-size: 24px;
+      margin: 0 30px 30px 30px
+    }
+  }
 
-      &__image {
-        height: 230px;
-        width: 350px;
+  &__bookings {
+    margin: 50px 0;
+    float: right;
+    width: calc(100% * 4 / 5);
+
+    &__index {
+      font-size: 24px;
+      margin: 30px;
+    }
+
+    &__nothing {
+      font-size: 24px;
+      margin: 0 30px 30px 30px
+    }
+  }
+}
+
+.user__room__container {
+  @include clearfix();
+  margin: 0 30px;
+
+  &__room {
+    float: left;
+
+    &__image {
+      height: 230px;
+      width: 350px;
+    }
+
+    &__info {
+
+      li {
+        display: inline-block;
+        margin: 10px 0;
+        font-weight: 700;
       }
     }
+  }
 
-    &__bookings {
-      float: right;
+  &__booking {
+    float: right;
+
+    &__status {
+      font-size: 24px;
     }
+
+    &__nothing {
+      font-size: 24px;
+    }
+  }
+}
+
+.user__booking__container {
+  @include clearfix();
+  margin: 0 30px;
+
+  &__room {
+    @include clearfix();
+    float: right;
+
+    &__image {
+      height: 230px;
+      width: 350px;
+    }
+
+    &__title {
+      font-weight: 700;
+      margin: 10px 0;
+    }
+  }
+
+  &__details {
+    margin-top: 90px;
+    float: left;
   }
 }

@@ -210,7 +210,7 @@ footer {
   border-top: 1px solid #dce0e0;
   clear: both;
   content: "";
-  display: lock;
+  display: block;
 }
 
 .footer__container {
@@ -310,11 +310,9 @@ hr {
       }
 
       &__detail {
+        @include clearfix();
         width: calc(100% * 2 / 3);
         float: left;
-        display: block;
-        content: "";
-        clear: left;
 
         &__owner {
           float: left;
@@ -338,7 +336,7 @@ hr {
       width: calc(100% * 1 / 3);
       border: solid;
       float: right;
-      margin-top: -60px;
+      margin-top: -110px;
 
       &__upper {
         background-color: rgba(60, 63, 64, 0.9);
@@ -359,9 +357,7 @@ hr {
       }
 
       &__lower {
-        clear: both;
-        content: "";
-        display: block;
+        @include clearfix();
       }
     }
   }
@@ -414,6 +410,18 @@ hr {
     text-decoration: none;
     opacity: 0.8;
   }
+}
+
+.booking__btn {
+  width: 50%;
+  height: 30px;
+  border-radius: 4px;
+  line-height: 16px;
+  font-size: 15px;
+  border-style: none;
+  background-color: $mainPink;
+  color: white;
+  font-size: 18px;
 }
 
 
