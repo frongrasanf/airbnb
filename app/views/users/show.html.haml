@@ -15,35 +15,35 @@
 .user__main
   = link_to "新しいリスティングを作成する", new_room_path, class: "user__main__create"
   .user__main__rooms
-  - if @rooms.present?
-    .user__main__rooms__index リスティング一覧
-    - @rooms.each do |room|
-      .user__room__container
-        .user__room__container__room
-          = link_to room_path(room) do
-            %img{ src: room.image, class: "user__room__container__room__image" }
-          %ul.user__room__container__room__info
-            %li.user__room__container__room__info__price $66
-            %li.user__room__container__room__info__type
-              = room.room_type
-            .user__room__container__room__info__title
-              = room.title
-            .user__room__container__room__info__review
-      .user__room__container__booking
-        .user__room__container__booking__status 予約状況
-        - if room.bookings.present?
-          - room.bookings.each do |booking|
-            %ul.room__booking__details
-              %li.room__booking__details__user
-                宿泊者：#{ booking.user.name }さん
-              %li.room__booking__details__check_in_date
-                チェックイン：#{ booking.check_in_date }
-              %li.room__booking__details__check_out_date
-                チェックアウト：#{ booking.check_in_date }
-        - else
-          予約はありません。
-  - else
-    まだリスティングしていません
+    - if @rooms.present?
+      .user__main__rooms__index リスティング一覧
+      - @rooms.each do |room|
+        .user__room__container
+          .user__room__container__room
+            = link_to room_path(room) do
+              %img{ src: room.image, class: "user__room__container__room__image" }
+            %ul.user__room__container__room__info
+              %li.user__room__container__room__info__price $66
+              %li.user__room__container__room__info__type
+                = room.room_type
+              .user__room__container__room__info__title
+                = room.title
+              .user__room__container__room__info__review
+        .user__room__container__booking
+          .user__room__container__booking__status 予約状況
+          - if room.bookings.present?
+            - room.bookings.each do |booking|
+              %ul.room__booking__details
+                %li.room__booking__details__user
+                  宿泊者：#{ booking.user.name }さん
+                %li.room__booking__details__check_in_date
+                  チェックイン：#{ booking.check_in_date }
+                %li.room__booking__details__check_out_date
+                  チェックアウト：#{ booking.check_in_date }
+          - else
+            予約はありません。
+    - else
+      まだリスティングしていません
 
 
 
