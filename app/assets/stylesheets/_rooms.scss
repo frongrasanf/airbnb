@@ -206,11 +206,9 @@ section h1 {
 }
 
 footer {
+  @include clearfix();
   padding: 48px 0;
   border-top: 1px solid #dce0e0;
-  clear: both;
-  content: "";
-  display: lock;
 }
 
 .footer__container {
@@ -310,11 +308,9 @@ hr {
       }
 
       &__detail {
+        @include clearfix();
         width: calc(100% * 2 / 3);
         float: left;
-        display: block;
-        content: "";
-        clear: left;
 
         &__owner {
           float: left;
@@ -359,9 +355,7 @@ hr {
       }
 
       &__lower {
-        clear: both;
-        content: "";
-        display: block;
+        @include clearfix();
       }
     }
   }

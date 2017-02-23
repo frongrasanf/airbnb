@@ -81,9 +81,7 @@
     }
 
     &__info {
-      clear: both;
-      content: "";
-      display: block;
+      @include clearfix();
 
       li {
         display: inline-block;
@@ -110,10 +108,8 @@
   margin: 0 30px;
 
   &__room {
+    @include clearfix();
     float: right;
-    clear: both;
-    content: "";
-    display: block;
 
     &__image {
       height: 230px;
