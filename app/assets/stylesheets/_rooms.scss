@@ -206,9 +206,11 @@ section h1 {
 }
 
 footer {
-  @include clearfix();
   padding: 48px 0;
   border-top: 1px solid #dce0e0;
+  clear: both;
+  content: "";
+  display: block;
 }
 
 .footer__container {
