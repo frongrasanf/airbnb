@@ -28,7 +28,18 @@
           .user__main__rooms__container__info__title
             = room.title
           .user__main__rooms__container__info__review
-      .user__main__rooms__bookings 予約一覧
+  .user__main__bookings
+    .user__main__bookings__index 予約一覧
+    - current_user.bookings.each do |booking|
+      .user__main__bookings__container
+        %img{ src: booking.room.image, class: "user__main__bookings__container__image" }
+        .user__main__bookings__container__title
+          = booking.room.title
+        .user__main__bookings__container__check_in_date
+          = booking.check_in_date
+        .user__main__bookings__container__check_out_date
+          = booking.check_out_date
+
 
 %footer
   = render "layouts/footer"
