@@ -60,4 +60,40 @@
       float: right;
     }
   }
+
+  &__bookings {
+    margin: 50px 0;
+    float: right;
+    width: calc(100% * 4 / 5);
+
+    &__index {
+      font-size: 24px;
+      margin: 30px;
+    }
+  }
+}
+
+.user__booking__container {
+  margin: 0 30px;
+
+  &__room {
+    float: right;
+    clear: both;
+    content: "";
+    display: block;
+
+    &__image {
+      height: 230px;
+      width: 350px;
+    }
+
+    &__title {
+      font-weight: 700;
+      margin: 10px 0;
+    }
+  }
+
+  &__details {
+    float: left;
+  }
 }
