@@ -8,7 +8,7 @@
     世界中の宿泊先と体験を予約。
 
 #top__room__search
-  = form_for(@room) do |f|
+  = form_for(@room, url: search_rooms_path, method: :get) do |f|
     %ul.search__form__location
       %li.search__form__location__label
         = f.label :prefecture, value: "場所", id: "location__label"
