@@ -27,9 +27,13 @@
         = form_for([@room, @booking]) do |f|
           %li.room__container__booking__lower__dates{ style:"position: relative" }
             = f.hidden_field :room_id, value: params[:id]
-            = f.text_field :check_in_date, class: "datetime-picker"
-            = f.text_field :check_out_date, class: "datetime-picker"
-            = f.submit "予約をリクエスト"
+            %li
+              = f.label "チェックイン"
+              = f.text_field :check_in_date, class: "datetime-picker"
+            %li
+              = f.label "チェックアウト"
+              = f.text_field :check_out_date, class: "datetime-picker"
+            = f.submit "予約する", class: "booking__btn"
           %li.room__container__booking__lower__persons
 
   .room__details
