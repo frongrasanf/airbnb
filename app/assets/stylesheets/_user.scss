@@ -45,20 +45,6 @@
       font-size: 24px;
       margin: 0 30px 30px 30px
     }
-
-    &__container {
-      margin: 0 30px;
-      float: left;
-
-      &__image {
-        height: 230px;
-        width: 350px;
-      }
-    }
-
-    &__bookings {
-      float: right;
-    }
   }
 
   &__bookings {
@@ -73,6 +59,15 @@
   }
 }
 
+.user__room__container {
+  margin: 0 30px;
+  float: left;
+
+  &__image {
+    height: 230px;
+    width: 350px;
+  }
+}
 .user__booking__container {
   margin: 0 30px;
 
