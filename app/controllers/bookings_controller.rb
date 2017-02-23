@@ -9,6 +9,6 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:check_in_date, :check_out_date).merge(user_id: current_user.id, room_id: params[:id])
+    params.require(:booking).permit(:room_id, :check_in_date, :check_out_date).merge(user_id: current_user.id)
   end
 end
