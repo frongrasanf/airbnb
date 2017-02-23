@@ -45,6 +45,11 @@
       font-size: 24px;
       margin: 0 30px 30px 30px
     }
+
+    &__nothing {
+      font-size: 24px;
+      margin: 0 30px 30px 30px
+    }
   }
 
   &__bookings {
@@ -55,6 +60,11 @@
     &__index {
       font-size: 24px;
       margin: 30px;
+    }
+
+    &__nothing {
+      font-size: 24px;
+      margin: 0 30px 30px 30px
     }
   }
 }
@@ -87,6 +97,10 @@
     float: right;
 
     &__status {
+      font-size: 24px;
+    }
+
+    &__nothing {
       font-size: 24px;
     }
   }

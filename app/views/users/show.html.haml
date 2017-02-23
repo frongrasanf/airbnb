@@ -41,14 +41,15 @@
                 %li.room__booking__details__check_out_date
                   チェックアウト：#{ booking.check_in_date }
           - else
-            予約はありません。
+            .user__room__container__booking__nothing
+              予約はありません。
     - else
-      まだリスティングしていません
+      .user__main__rooms__nothing
+        まだリスティングしていません。
 
 
-
-  - if current_user.bookings.present?
-    .user__main__bookings
+  .user__main__bookings
+    - if current_user.bookings.present?
       .user__main__bookings__index 予約一覧
       - current_user.bookings.each do |booking|
         .user__booking__container
@@ -61,8 +62,9 @@
               チェックイン：#{ booking.check_in_date }
             %li.user__booking__container__details__check_out_date
               チェックアウト：#{ booking.check_out_date }
-  - else
-    予約はありません
+    - else
+      .user__main__bookings__nothing
+        予約はありません。
 
 
 %footer
