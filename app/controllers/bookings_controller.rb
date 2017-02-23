@@ -3,6 +3,8 @@ class BookingsController < ApplicationController
     user = current_user
     booking = Booking.new(booking_params)
     room_id = booking.room_id
+    stay_days = booking.check_out_date - booking.check_in_date
+    booking.stay_days = stay_days.to_i
     if booking.save
       redirect_to user_path(user)
     else
