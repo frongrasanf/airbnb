@@ -25,12 +25,12 @@
         %li.room__container__booking__upper__night /泊
       %ul.room__container__booking__lower
         = form_for([@room, @booking]) do |f|
-          %li.room__container__booking__lower__dates{ style:"position: relative" }
+          %li.room__container__booking__lower__dates
             = f.hidden_field :room_id, value: params[:id]
-            %li
+            %li{ style:"position: relative" }
               = f.label "チェックイン"
               = f.text_field :check_in_date, class: "datetime-picker"
-            %li
+            %li{ style:"position: relative" }
               = f.label "チェックアウト"
               = f.text_field :check_out_date, class: "datetime-picker"
             = f.submit "予約する", class: "booking__btn"
