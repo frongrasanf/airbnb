@@ -38,6 +38,7 @@
   }
 
   &__rooms {
+    @include clearfix();
     float: right;
     width: calc(100% * 4 / 5);
 
@@ -70,6 +71,7 @@
 }
 
 .user__room__container {
+  @include clearfix();
   margin: 0 30px;
 
   &__room {
@@ -81,7 +83,6 @@
     }
 
     &__info {
-      @include clearfix();
 
       li {
         display: inline-block;
@@ -105,6 +106,7 @@
 }
 
 .user__booking__container {
+  @include clearfix();
   margin: 0 30px;
 
   &__room {
@@ -123,6 +125,7 @@
   }
 
   &__details {
+    // @include clearfix();
     float: left;
   }
 }
