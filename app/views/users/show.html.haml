@@ -15,22 +15,23 @@
 .user__main
   = link_to "新しいリスティングを作成する", new_room_path, class: "user__main__create"
   .user__main__rooms
+  - if @rooms.present?
     .user__main__rooms__index リスティング一覧
-    - if @rooms.present?
-      - @rooms.each do |room|
-        .user__room__container
-          .user__room__container__room
-            = link_to room_path(room) do
-              %img{ src: room.image, class: "user__room__container__room__image" }
-            %ul.user__room__container__room__info
-              %li.user__room__container__room__info__price $66
-              %li.user__room__container__room__info__type
-                = room.room_type
-              .user__room__container__room__info__title
-                = room.title
-              .user__room__container__room__info__review
-        .user__room__container__booking
-          .user__room__container__booking__status 予約状況
+    - @rooms.each do |room|
+      .user__room__container
+        .user__room__container__room
+          = link_to room_path(room) do
+            %img{ src: room.image, class: "user__room__container__room__image" }
+          %ul.user__room__container__room__info
+            %li.user__room__container__room__info__price $66
+            %li.user__room__container__room__info__type
+              = room.room_type
+            .user__room__container__room__info__title
+              = room.title
+            .user__room__container__room__info__review
+      .user__room__container__booking
+        .user__room__container__booking__status 予約状況
+        - if room.bookings.present?
           - room.bookings.each do |booking|
             %ul.room__booking__details
               %li.room__booking__details__user
@@ -39,23 +40,29 @@
                 チェックイン：#{ booking.check_in_date }
               %li.room__booking__details__check_out_date
                 チェックアウト：#{ booking.check_in_date }
+        - else
+          予約はありません。
+  - else
+    まだリスティングしていません
 
 
 
-
-  .user__main__bookings
-    .user__main__bookings__index 予約一覧
-    - current_user.bookings.each do |booking|
-      .user__booking__container
-        .user__booking__container__room
-          %img{ src: booking.room.image, class: "user__booking__container__room__image" }
-          .user__booking__container__room__title
-            = booking.room.title
-        %ul.user__booking__container__details
-          %li.user__booking__container__details__check_in_date
-            チェックイン：#{ booking.check_in_date }
-          %li.user__booking__container__details__check_out_date
-            チェックアウト：#{ booking.check_out_date }
+  - if current_user.bookings.present?
+    .user__main__bookings
+      .user__main__bookings__index 予約一覧
+      - current_user.bookings.each do |booking|
+        .user__booking__container
+          .user__booking__container__room
+            %img{ src: booking.room.image, class: "user__booking__container__room__image" }
+            .user__booking__container__room__title
+              = booking.room.title
+          %ul.user__booking__container__details
+            %li.user__booking__container__details__check_in_date
+              チェックイン：#{ booking.check_in_date }
+            %li.user__booking__container__details__check_out_date
+              チェックアウト：#{ booking.check_out_date }
+  - else
+    予約はありません
 
 
 %footer
