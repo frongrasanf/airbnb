@@ -49,9 +49,9 @@
 
 
   .user__main__bookings
-    - if current_user.bookings.present?
+    - if @bookings.present?
       .user__main__bookings__index 予約一覧
-      - current_user.bookings.each do |booking|
+      - @bookings.each do |booking|
         .user__booking__container
           .user__booking__container__room
             %img{ src: booking.room.image, class: "user__booking__container__room__image" }
