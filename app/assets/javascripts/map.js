@@ -1,14 +1,17 @@
-$(function() {
-  var map = new google.maps.Map( document.getElementById('map-canvas'), {
-    zoom: 15,
-    center: new google.maps.LatLng(35.792621, 139.806513),
+$(function(){
+  var geocoder = new google.maps.Geocoder();
+  var address = "渋谷区渋谷";
+  geocoder.geocode({'address': address,'language':'ja'},function(results, status){
+    if (status == google.maps.GeocoderStatus.OK) {
+      var latlng = results[0].geometry.location;
+      var mapOpt = {
+        center: latlng,
+        zoom: 15,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+      };
+      var map = new google.maps.Map(document.getElementById('map-canvas'),mapOpt);
+    }else {
+      alert("Geocode was not successful for the following reason: " + status);
+    }
   });
-
-  var circle = new google.maps.Circle({
-    center: new google.maps.LatLng(33.839947, 132.75110700000008) ,
-    map: map,
-    radius: 1000,
-    fillColor: "pink"
-  });
-  map.fitBounds(circle.getBounds());
 });
