@@ -24,6 +24,10 @@ class RoomsController < ApplicationController
     @booking = Booking.new
   end
 
+  def search
+    @user = User.new
+  end
+
   private
 
   def room_params
