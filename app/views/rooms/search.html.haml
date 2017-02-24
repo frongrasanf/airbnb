@@ -1,9 +1,16 @@
 = render "layouts/header"
 
-.search__navi
+%ul.search__navi
+  %li.search__navi__date チェックイン チェックアウト
+  %li.search__navi__person 宿泊1人
+  %li.search__navi__type 部屋タイプ
+  %li.search__navi__price 価格帯
+  %li.search__navi__booking 今すぐ予約
+  %li.search__navi__filter フィルター
 
-.search__main
-  .search__main__container
-    .search__main__container__index 日付を入力すると合計金額が表示されます（税・サービス料別）。
+.search__result
+  .search__result__container
+    .search__result__container__index
+      日付を入力すると合計金額が表示されます（税・サービス料別）。
 
-.search__map
+  .search__result__map
