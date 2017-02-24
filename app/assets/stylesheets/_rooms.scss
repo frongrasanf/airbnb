@@ -466,3 +466,36 @@ hr {
     float: right;
   }
 }
+
+.search__room {
+  @include clearfix();
+  display: inline-block;
+  float: left;
+  margin: 0 0 20px 50px;
+  color: #484848;
+  font-weight: 200;
+  font-size: 14px;
+  &:hover {
+    color: #484848;
+    text-decoration: none;
+  }
+
+  &__image {
+    height: 230px;
+    width: 300px;
+  }
+
+  &__details {
+
+    li {
+      margin-top: 10px;
+      font-weight: 700;
+      list-style: none;
+      display: inline-block;
+    }
+
+    &__price {
+      font-weight: 700;
+    }
+  }
+}
