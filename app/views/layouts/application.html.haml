@@ -6,6 +6,6 @@
     = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all', data: { turbolinks: { track: true } }
     = javascript_include_tag 'application', data: { turbolinks: { track: true } }
-    %script{ src:"//maps.googleapis.com/maps/api/js?key=" + ENV['GOOGLE_API_KEY'] + "&libraries=places,geometry&lang=ja" }
+    %script{ src:"//maps.googleapis.com/maps/api/js?key=" + ENV['GOOGLE_API_KEY'] + "&libraries=places&lang=ja" }
   %body
     = yield

@@ -10,6 +10,5 @@ $(function() {
     radius: 1000,
     fillColor: "pink"
   });
-
   map.fitBounds(circle.getBounds());
 });
