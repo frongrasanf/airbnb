@@ -424,4 +424,32 @@ hr {
   font-size: 18px;
 }
 
+.search__navi {
+  @include clearfix();
+  border-top: 1px solid #dce0e0;
+  border-bottom: 1px solid #dce0e0;
+  line-height: 48px;
+  li {
+    list-style: none;
+    display: inline-block;
+    color: #484848;
+    padding: 0 10px;
+    border-right: 1px solid #dce0e0;
+  }
+}
 
+.search__result {
+
+  &__container {
+    float: left;
+    padding: 10px;
+
+    &__index {
+      color: #767676;
+    }
+  }
+
+  &__map {
+    float: right;
+  }
+}
