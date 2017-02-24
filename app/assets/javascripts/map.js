@@ -1,7 +1,23 @@
 $(function(){
+
+  function initialize() {
+    var input = document.getElementById("location__input");
+    var options = {
+        types: ['(cities)'],
+    };
+    autocomplete = new google.maps.places.Autocomplete( input, options);
+  }
+  google.maps.event.addDomListener( window, 'load', initialize);
+
+  $(".search__form__submit__btn").on("click", function(){
+    var input = document.getElementById("location__input");
+    var searchLocation = input.value;
+    var geocoder = new google.maps.Geocoder();
+    var address = searchLocation;
+  })
+
   var geocoder = new google.maps.Geocoder();
-  var address = "渋谷区渋谷";
-  geocoder.geocode({'address': address,'language':'ja'},function(results, status){
+  geocoder.geocode({ 'address': "渋谷区渋谷",'language':'ja' }, function(results, status){
     if (status == google.maps.GeocoderStatus.OK) {
       var latlng = results[0].geometry.location;
       var mapOpt = {
@@ -15,3 +31,4 @@ $(function(){
     }
   });
 });
+
