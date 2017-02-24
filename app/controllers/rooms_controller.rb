@@ -26,6 +26,7 @@ class RoomsController < ApplicationController
 
   def search
     @user = User.new
+    @rooms = Room.order('id DESC').limit(5)
   end
 
   private

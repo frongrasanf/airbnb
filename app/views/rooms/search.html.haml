@@ -12,5 +12,15 @@
   .search__result__container
     .search__result__container__index
       日付を入力すると合計金額が表示されます（税・サービス料別）。
+    .search__result__container__rooms
+    - @rooms.each do |room|
+      = link_to room_path(room), class: "search__room" do
+        %img{ src: room.image, class: "search__room__image" }
+        %ul.search__room__details
+          %li.search__room__price $66
+          %li.search__room__title
+            = room.title
+        .search__room__room_type
+          = room.room_type
 
   .search__result__map
