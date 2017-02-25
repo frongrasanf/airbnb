@@ -26,8 +26,8 @@ class RoomsController < ApplicationController
   end
 
   def search
-    @rooms = Room.where('prefecture LIKE(?)', "%#{ params[:keyword] }%")
     @keyword = params[:keyword]
+    @rooms = Room.near([params[:room][:latitude], params[:room][:longitude]], 50)
   end
 
   private
