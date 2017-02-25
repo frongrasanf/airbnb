@@ -1,5 +1,7 @@
 $(function(){
 
+  var hidden_keyword = $(".search__result__container__index");
+
   function initialize() {
     var input = document.getElementById("location__input");
     var options = {
@@ -9,26 +11,24 @@ $(function(){
   }
   google.maps.event.addDomListener( window, 'load', initialize);
 
-  $(".search__form__submit__btn").on("click", function(){
-    var input = document.getElementById("location__input");
-    var searchLocation = input.value;
-    var geocoder = new google.maps.Geocoder();
-    var address = searchLocation;
-  })
-
-  var geocoder = new google.maps.Geocoder();
-  geocoder.geocode({ 'address': "渋谷区渋谷",'language':'ja' }, function(results, status){
-    if (status == google.maps.GeocoderStatus.OK) {
-      var latlng = results[0].geometry.location;
-      var mapOpt = {
-        center: latlng,
-        zoom: 15,
-        mapTypeId: google.maps.MapTypeId.ROADMAP
-      };
-      var map = new google.maps.Map(document.getElementById('map-canvas'),mapOpt);
-    }else {
-      alert("Geocode was not successful for the following reason: " + status);
-    }
-  });
+  if (hidden_keyword.length) {
+    $(window).load(function() {
+      var geocoder = new google.maps.Geocoder();
+      var location = hidden_keyword.attr('data-location');
+      geocoder.geocode({ 'address': location,'language':'ja' }, function(results, status){
+        if (status == google.maps.GeocoderStatus.OK) {
+          var latlng = results[0].geometry.location;
+          var mapOpt = {
+            center: latlng,
+            zoom: 15,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+          };
+          var map = new google.maps.Map(document.getElementById('map-canvas'),mapOpt);
+        }else {
+          alert("Geocode was not successful for the following reason: " + status);
+        }
+      });
+    });
+  }
 });
 

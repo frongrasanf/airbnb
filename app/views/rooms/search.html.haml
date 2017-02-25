@@ -10,7 +10,7 @@
 
 .search__result
   .search__result__container
-    .search__result__container__index
+    .search__result__container__index{ data: { location: @keyword } }
       日付を入力すると合計金額が表示されます（税・サービス料別）。
     .search__result__container__rooms
     - @rooms.each do |room|
