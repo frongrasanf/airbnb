@@ -19,7 +19,7 @@
         %li.room__container__info__detail__title
           = @room.title
         %li.room__container__info__detail__location
-          = @room.prefecture
+          = @room.city
 
     .room__container__booking
       %ul.room__container__booking__upper
@@ -51,7 +51,7 @@
   .room__location
     .room__location__title エリア
     .room__location__details
-      %p #{ @room.user.name }さんの家は、#{ @room.prefecture }にあります！
+      %p #{ @room.user.name }さんの家は、#{ @room.city }にあります！
       #room__map
 
 %footer
