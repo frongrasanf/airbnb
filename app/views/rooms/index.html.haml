@@ -9,8 +9,8 @@
 
 #top__room__search
   = form_for(@room, url: search_rooms_path, method: :get) do |f|
-    = f.hidden_field :latitude, id: "hidden__latitude", name: "room[latitude]", value: 36
-    = f.hidden_field :longitude, id: "hidden__longitude", name: "room[longitude]", value: 140
+    = f.hidden_field :latitude, id: "hidden__latitude", name: "room[latitude]"
+    = f.hidden_field :longitude, id: "hidden__longitude", name: "room[longitude]"
     %ul.search__form__location
       %li.search__form__location__label
         = f.label :prefecture, value: "場所", id: "location__label"
