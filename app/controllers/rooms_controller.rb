@@ -26,7 +26,7 @@ class RoomsController < ApplicationController
   end
 
   def search
-    @rooms = Room.order('id DESC').limit(5)
+    @rooms = Room.where('prefecture LIKE(?)', "%#{ params[:keyword] }%")
   end
 
   private
