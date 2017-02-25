@@ -12,6 +12,10 @@
   .search__result__container
     .search__result__container__index{ data: { location: @keyword } }
       日付を入力すると合計金額が表示されます（税・サービス料別）。
+      - if @rooms.empty?
+        %p #{ @keyword }周辺の宿泊施設は見つかりませんでした。
+      -else
+        %p #{ @keyword }周辺の宿泊施設が #{ @rooms.length }件 見つかりました。
     .search__result__container__rooms
     - @rooms.each do |room|
       = link_to room_path(room), class: "search__room" do
