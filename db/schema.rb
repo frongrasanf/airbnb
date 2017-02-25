@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170223091439) do
+ActiveRecord::Schema.define(version: 20170225082024) do
 
   create_table "bookings", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer  "user_id",        null: false
@@ -30,6 +30,8 @@ ActiveRecord::Schema.define(version: 20170223091439) do
     t.string  "room_type",                null: false
     t.text    "image",      limit: 65535
     t.integer "user_id"
+    t.float   "latitude",   limit: 24
+    t.float   "longitude",  limit: 24
     t.index ["user_id"], name: "index_rooms_on_user_id", using: :btree
   end
 
