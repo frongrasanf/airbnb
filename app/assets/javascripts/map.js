@@ -30,5 +30,18 @@ $(function(){
       });
     });
   }
+
+  if ($(".room__location").length) {
+    var lat = $(".main__room__navi__location__lat").attr('data-lat');
+    var lng = $(".main__room__navi__location__lng").attr('data-lng');
+
+    var centerPosition = new google.maps.LatLng(lat, lng);
+    var option = {
+      zoom : 18,
+      center : centerPosition,
+      mapTypeId : google.maps.MapTypeId.ROADMAP
+    }
+    var roomMap = new google.maps.Map(document.getElementById("room__map"), option);
+  }
 });
 
