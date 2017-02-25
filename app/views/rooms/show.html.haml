@@ -10,6 +10,8 @@
         %li.main__room__navi__reviews レビュー
         %li.main__room__navi__owner ホストについて
         %li.main__room__navi__location 所在地
+        %li.main__room__navi__location__lat{ data: { lat: @room.latitude } }
+        %li.main__room__navi__location__lng{ data: { lng: @room.longitude } }
 
       %ul.room__container__info__detail
         %li.room__container__info__detail__owner
@@ -50,6 +52,7 @@
     .room__location__title エリア
     .room__location__details
       %p #{ @room.user.name }さんの家は、#{ @room.prefecture }にあります！
+      #room__map
 
 %footer
   = render "layouts/footer"
