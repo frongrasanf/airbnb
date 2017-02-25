@@ -13,9 +13,9 @@
     = f.hidden_field :longitude, id: "hidden__longitude", name: "room[longitude]"
     %ul.search__form__location
       %li.search__form__location__label
-        = f.label :prefecture, value: "場所", id: "location__label"
+        = f.label :city, value: "場所", id: "location__label"
       %li.search__form__location__input
-        = f.text_field :prefecture, id: "location__input", placeholder: "行き先、都市、住所", name: "keyword"
+        = f.text_field :city, id: "location__input", placeholder: "行き先、都市、住所", name: "keyword"
     %ul.search__form__dates
       .search__form__dates__label
         = f.label :prefecture, value: "日時", id: "dates__label"
