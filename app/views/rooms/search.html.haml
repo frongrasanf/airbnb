@@ -1,12 +1,36 @@
 = render "layouts/header"
 
-%ul.search__navi
-  %li.search__navi__date チェックイン チェックアウト
-  %li.search__navi__person 宿泊1人
-  %li.search__navi__type 部屋タイプ
-  %li.search__navi__price 価格帯
-  %li.search__navi__booking 今すぐ予約
-  %li.search__navi__filter フィルター
+.search__navi
+  %ul.search__navi__input
+    - if @check_in_date.present? && @check_out_date.present?
+      %li.search__navi__input__check_in_date
+        = @check_in_date
+      %li.search__navi__input__arrow
+        %i.fa.fa-arrow-right{ aria: { hidden: true } }
+      %li.search__navi__input__check_out_date
+        = @check_out_date
+
+  %ul.search__navi__wrapper
+    %ul.search__navi__wrapper__person
+      %li 宿泊1人
+      %li.template__icon
+        %i.fa.fa-angle-down{ aria: { hidden: true } }
+    %ul.search__navi__wrapper__type
+      %li 部屋タイプ
+      %li.template__icon
+        %i.fa.fa-angle-down{ aria: { hidden: true } }
+    %ul.search__navi__wrapper__price
+      %li 価格帯
+      %li.template__icon
+        %i.fa.fa-angle-down{ aria: { hidden: true } }
+    %ul.search__navi__wrapper__booking
+      %li 今すぐ予約
+      %li.template__icon
+        %i.fa.fa-angle-down{ aria: { hidden: true } }
+    %ul.search__navi__wrapper__filter
+      %li フィルター
+      %li.template__icon
+        %i.fa.fa-angle-down{ aria: { hidden: true } }
 
 .search__result
   .search__result__container
