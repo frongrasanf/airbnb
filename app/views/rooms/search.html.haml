@@ -1,0 +1,31 @@
+= render "layouts/header"
+
+%ul.search__navi
+  %li.search__navi__date チェックイン チェックアウト
+  %li.search__navi__person 宿泊1人
+  %li.search__navi__type 部屋タイプ
+  %li.search__navi__price 価格帯
+  %li.search__navi__booking 今すぐ予約
+  %li.search__navi__filter フィルター
+
+.search__result
+  .search__result__container
+    .search__result__container__index{ data: { location: @keyword } }
+      日付を入力すると合計金額が表示されます（税・サービス料別）。
+      - if @rooms.empty?
+        %p #{ @keyword }周辺の宿泊施設は見つかりませんでした。
+      -else
+        %p #{ @keyword }周辺の宿泊施設が #{ @rooms.length }件 見つかりました。
+    .search__result__container__rooms
+    - @rooms.each do |room|
+      = link_to room_path(room), class: "search__room" do
+        %img{ src: room.image, class: "search__room__image" }
+        %ul.search__room__details
+          %li.search__room__price $66
+          %li.search__room__title
+            = room.title
+        .search__room__room_type
+          = room.room_type
+
+  .search__result__map
+    #map-canvas

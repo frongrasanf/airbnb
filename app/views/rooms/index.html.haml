@@ -8,15 +8,17 @@
     世界中の宿泊先と体験を予約。
 
 #top__room__search
-  = form_for(@room) do |f|
+  = form_for(@room, url: search_rooms_path, method: :get) do |f|
+    = f.hidden_field :latitude, id: "hidden__latitude", name: "room[latitude]"
+    = f.hidden_field :longitude, id: "hidden__longitude", name: "room[longitude]"
     %ul.search__form__location
       %li.search__form__location__label
-        = f.label :prefecture, value: "場所", id: "location__label"
+        = f.label :city, value: "場所", id: "location__label"
       %li.search__form__location__input
-        = f.text_field :prefecture, id: "location__input", placeholder: "行き先、都市、住所"
+        = f.text_field :city, id: "location__input", placeholder: "行き先、都市、住所", name: "keyword"
     %ul.search__form__dates
       .search__form__dates__label
-        = f.label :prefecture, value: "日時", id: "dates__label"
+        = f.label :city, value: "日時", id: "dates__label"
       .search__form__dates__input{ style:"position: relative" }
         = f.text_field :bookings, id: "checkin__dates__input", class: "datetime-picker", placeholder: "チェックイン"
         = f.text_field :bookings, id: "checkout__dates__input", class: "datetime-picker", placeholder: "チェックアウト"

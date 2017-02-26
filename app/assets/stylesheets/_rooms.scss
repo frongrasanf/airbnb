@@ -4,10 +4,10 @@ html, body {
 }
 
 header {
-  height: 61px;
 }
 
 .header__container {
+  height: 61px;
   list-style: none;
   padding-top: 20px;
   color: #484848;
@@ -180,6 +180,10 @@ section h1 {
   &__container {
     display: inline-block;
     width: calc(100% * 1 / 3);
+    &:hover {
+      color: #484848;
+      text-decoration: none;
+    }
 
     &__image {
       height: 230px;
@@ -382,6 +386,8 @@ hr {
   &__location {
     border-top: 1px solid #dce0e0;
     margin-bottom: 100px;
+    width: 100%;
+    height: 100%;
 
     &__title {
       margin: 20px 100px;
@@ -393,8 +399,15 @@ hr {
 
     &__details {
       padding: 0 100px;
+      width: 100%;
+      height: 100%;
     }
   }
+}
+
+#room__map {
+  width: 100%;
+  height: 500px;
 }
 
 .room__new {
@@ -424,5 +437,91 @@ hr {
   font-size: 18px;
 }
 
+.search__navi {
+  @include clearfix();
+  border-top: 1px solid #dce0e0;
+  border-bottom: 1px solid #dce0e0;
+  line-height: 48px;
+  height: 48px;
+  li {
+    list-style: none;
+    display: inline-block;
+    color: #484848;
+    padding: 0 10px;
+    border-right: 1px solid #dce0e0;
+  }
+}
 
+.search__result {
+  width: 100%;
+  height: calc(100vh - 120px);
 
+  &__container {
+    float: left;
+    width: calc(100% * 3 / 5);
+    height: 100%;
+    overflow: scroll;
+
+    &__index {
+      padding-left: 50px;
+      margin-bottom: 20px;
+      color: #767676;
+      width: 100%;
+      height: 40px;
+      position: fixed;
+      background-color: white;
+      border-bottom: 1px solid #dce0e0;
+    }
+
+    &__rooms {
+      width: 100%;
+      margin-top: 50px;
+    }
+  }
+
+  &__map {
+    float: right;
+    width: calc(100% * 2 / 5);
+    height: 100%;
+    margin-top: -10px;
+    margin-bottom: -10px;
+  }
+}
+
+#map-canvas {
+  width: 100%;
+  height: 100%;
+}
+
+.search__room {
+  @include clearfix();
+  display: inline-block;
+  float: left;
+  margin: 0 0 20px 50px;
+  color: #484848;
+  font-weight: 200;
+  font-size: 14px;
+  &:hover {
+    color: #484848;
+    text-decoration: none;
+  }
+
+  &__image {
+    height: 230px;
+    width: 300px;
+  }
+
+  &__details {
+
+    li {
+      margin-top: 10px;
+      font-weight: 700;
+      list-style: none;
+      display: inline-block;
+    }
+
+    &__price {
+      font-weight: 700;
+    }
+  }
+}

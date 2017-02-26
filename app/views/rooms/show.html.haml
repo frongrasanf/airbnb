@@ -10,6 +10,8 @@
         %li.main__room__navi__reviews レビュー
         %li.main__room__navi__owner ホストについて
         %li.main__room__navi__location 所在地
+        %li.main__room__navi__location__lat{ data: { lat: @room.latitude } }
+        %li.main__room__navi__location__lng{ data: { lng: @room.longitude } }
 
       %ul.room__container__info__detail
         %li.room__container__info__detail__owner
@@ -17,7 +19,7 @@
         %li.room__container__info__detail__title
           = @room.title
         %li.room__container__info__detail__location
-          = @room.prefecture
+          = @room.city
 
     .room__container__booking
       %ul.room__container__booking__upper
@@ -49,7 +51,8 @@
   .room__location
     .room__location__title エリア
     .room__location__details
-      %p #{ @room.user.name }さんの家は、#{ @room.prefecture }にあります！
+      %p #{ @room.user.name }さんの家は、#{ @room.city }にあります！
+      #room__map
 
 %footer
   = render "layouts/footer"
