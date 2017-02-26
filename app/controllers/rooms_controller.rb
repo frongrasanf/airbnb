@@ -26,6 +26,8 @@ class RoomsController < ApplicationController
   end
 
   def search
+    @check_in_date = params[:check_in_date]
+    @check_out_date = params[:check_out_date]
     @keyword = params[:keyword]
     @rooms = Room.near([params[:room][:latitude], params[:room][:longitude]], 50)
   end
