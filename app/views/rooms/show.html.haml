@@ -5,38 +5,52 @@
   %img{ src: @room.image, class: "room__image" }
   .room__container
     .room__container__info
-      %ul.room__container__info__navi
-        %li.main__room__navi__overview 概要
-        %li.main__room__navi__reviews レビュー
-        %li.main__room__navi__owner ホストについて
-        %li.main__room__navi__location 所在地
-        %li.main__room__navi__location__lat{ data: { lat: @room.latitude } }
-        %li.main__room__navi__location__lng{ data: { lng: @room.longitude } }
+      %ul.room__navi
+        %li.room__navi__overview 概要
+        %li.room__navi__reviews レビュー
+        %li.room__navi__owner ホストについて
+        %li.room__navi__location 所在地
+        %li.room__navi__location__lat{ data: { lat: @room.latitude } }
+        %li.room__navi__location__lng{ data: { lng: @room.longitude } }
 
-      %ul.room__container__info__detail
-        %li.room__container__info__detail__owner
-          = @room.user.name
-        %li.room__container__info__detail__title
+      .room__info
+        %ul.room__info__owner
+          %li
+            %img{ src: @room.image, class: "room__info__owner__image" }
+          %li
+            = @room.user.name
+        .room__info__title
           = @room.title
-        %li.room__container__info__detail__location
-          = @room.city
+        %ul.room__info__icons
+          %ul
+            %i.fa.fa-home.fa-3x{ aria: { hidden: true } }
+            %li
+              = @room.room_type
+          %ul
+            %i.fa.fa-users.fa-3x{ aria: { hidden: true } }
+            %li 3名
+          %ul
+            %i.fa.fa-bed.fa-3x{ aria: { hidden: true } }
+            %li ベッド2台
 
-    .room__container__booking
-      %ul.room__container__booking__upper
-        %li.room__container__booking__upper__price $82
-        %li.room__container__booking__upper__night /泊
-      %ul.room__container__booking__lower
+    #modal-booking.room__booking
+      %ul.room__booking__upper
+        %li.room__booking__upper__price $82
+        %li.room__booking__upper__night /泊
+      .room__booking__lower.row
         = form_for([@room, @booking]) do |f|
-          %li.room__container__booking__lower__dates
-            = f.hidden_field :room_id, value: params[:id]
+          = f.hidden_field :room_id, value: params[:id]
+          %ul.room__booking__lower__form.form-group.col-md-6
             %li{ style:"position: relative" }
               = f.label "チェックイン"
-              = f.text_field :check_in_date, class: "datetime-picker"
+              = f.text_field :check_in_date, class: "datetime-picker form-control"
+          %ul.room__booking__lower__form.form-group.col-md-6
             %li{ style:"position: relative" }
               = f.label "チェックアウト"
-              = f.text_field :check_out_date, class: "datetime-picker"
+              = f.text_field :check_out_date, class: "datetime-picker form-control"
+          .room__booking__lower__btn.col-md-8.col-md-offset-2
             = f.submit "予約する", class: "booking__btn"
-          %li.room__container__booking__lower__persons
+            %p まだ請求は発生しません。
 
   .room__details
     .room__details__listing__title リスティングについて

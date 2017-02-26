@@ -294,79 +294,116 @@ hr {
   }
 
   &__container {
-    padding: 60px 100px;
-    border-bottom: 1px solid #dce0e0;
+    padding: 60px 100px 0 100px;
+    border-bottom: solid 1px #dbdbdb;
+    @include clearfix();
 
     &__info {
+      @include clearfix();
       width: calc(100% * 2 / 3);
+      float: left;
+    }
+  }
 
-      &__navi {
-        border-bottom: solid 1px #dbdbdb;
-        padding-bottom: 10px;
+  &__navi {
+    border-bottom: solid 1px #dbdbdb;
+    padding-bottom: 10px;
 
-        li {
-          list-style: none;
-          display: inline-block;
-          font-size: 20px;
-          color: $footerGray;
-          margin-right: 50px;
-        }
-      }
+    li {
+      list-style: none;
+      display: inline-block;
+      font-size: 20px;
+      color: $footerGray;
+      margin-right: 50px;
+    }
+  }
 
-      &__detail {
-        @include clearfix();
-        width: calc(100% * 2 / 3);
-        float: left;
+  &__info {
+    @include clearfix();
+    width: calc(100% * 2 / 3);
+    list-style: none;
 
-        &__owner {
-          float: left;
-          font-size: 20px;
-        }
+    &__owner  {
+      float: left;
+      font-size: 20px;
+      text-align: center;
 
-        &__title {
-          font-size: 24px;
-          font-family: BlinkMacSystemFont;
-          color: #484848;
-          float: right;
-        }
-
-        &__location {
-          float: right;
-        }
+      &__image {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
       }
     }
 
-    &__booking {
-      width: calc(100% * 1 / 3);
-      border: solid;
+    &__title {
+      font-size: 24px;
+      font-family: BlinkMacSystemFont;
+      color: #484848;
       float: right;
-      margin-top: -110px;
+    }
 
-      &__upper {
-        background-color: rgba(60, 63, 64, 0.9);
-        color: white;
-        font-family: BlinkMacSystemFont;
-        height: 50px;
-        padding: 10px;
+    &__icons {
+      clear: right;
+      float: right;
+      margin: 20px 0;
 
-        &__price {
-          float: left;
-          font-size: 24px;
-        }
-
-        &__night {
-          float: right;
-          padding-top: 10px;
-        }
+      ul {
+        display: inline-block;
+        margin-left: 40px;
       }
 
-      &__lower {
-        @include clearfix();
+      li {
+        text-align: center;
+      }
+    }
+  }
+
+  &__booking {
+    width: calc(100% * 1 / 3);
+    border: 1px solid #dce0e0;
+    float: right;
+    margin-top: -61px;
+    height: 100%;
+
+    &__upper {
+      @include clearfix();
+      clear: right;
+      background-color: rgba(60, 63, 64, 0.9);
+      color: white;
+      height: 50px;
+      padding: 10px;
+
+      &__price {
+        font-size: 24px;
+        float: left;
+      }
+
+      &__night {
+        padding-top: 10px;
+        float: right;
+      }
+    }
+
+    &__lower {
+      @include clearfix();
+      margin: 19px 0;
+
+      &__form {
+        margin: 0 auto;
+      }
+
+      &__btn {
+        text-align: center;
+
+        p {
+          color: #767676;
+        }
       }
     }
   }
 
   &__details {
+    clear: both;
     padding: 60px 100px;
     width: calc(100% * 2 / 3);
 
@@ -426,8 +463,9 @@ hr {
 }
 
 .booking__btn {
-  width: 50%;
+  width: 100%;
   height: 30px;
+  margin: 20px 0;
   border-radius: 4px;
   line-height: 16px;
   font-size: 15px;
@@ -435,6 +473,9 @@ hr {
   background-color: $mainPink;
   color: white;
   font-size: 18px;
+  &:hover {
+    opacity: 0.8;
+  }
 }
 
 .search__navi {
