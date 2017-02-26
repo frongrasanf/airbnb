@@ -270,6 +270,10 @@ footer {
       color: $footerGray;
       margin-right: 50px;
     }
+
+    &__location {
+      cursor: pointer;
+    }
   }
 
   &__info {
