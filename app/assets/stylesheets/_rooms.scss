@@ -442,6 +442,7 @@ hr {
   border-top: 1px solid #dce0e0;
   border-bottom: 1px solid #dce0e0;
   line-height: 48px;
+  height: 48px;
   li {
     list-style: none;
     display: inline-block;
@@ -453,22 +454,28 @@ hr {
 
 .search__result {
   width: 100%;
-  height: 100%;
+  height: calc(100vh - 120px);
 
   &__container {
     float: left;
-    padding: 10px;
     width: calc(100% * 3 / 5);
     height: 100%;
+    overflow: scroll;
 
     &__index {
-      margin-left: 50px;
+      padding-left: 50px;
       margin-bottom: 20px;
       color: #767676;
+      width: 100%;
+      height: 40px;
+      position: fixed;
+      background-color: white;
+      border-bottom: 1px solid #dce0e0;
     }
 
     &__rooms {
       width: 100%;
+      margin-top: 50px;
     }
   }
 
@@ -476,6 +483,8 @@ hr {
     float: right;
     width: calc(100% * 2 / 5);
     height: 100%;
+    margin-top: -10px;
+    margin-bottom: -10px;
   }
 }
 
