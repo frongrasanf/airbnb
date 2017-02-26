@@ -22,11 +22,11 @@ $(function(){
 
   //ユーザーが入力した地名の緯度・経度を算出し、hiddenのvalueに返す
   //hidden parameterとして送られた緯度・経度を元に、周辺の宿泊施設を検索
-  $(".search__form__submit__btn").mouseover(function(){
+  $("#location__input").on("keyup", function(){
     var input = document.getElementById("location__input");
-    var searchLocation = input.value;
+    var word = input.value;
     var geocoder = new google.maps.Geocoder();
-    geocoder.geocode({'address': searchLocation }, function(results, status){
+    geocoder.geocode({'address': word }, function(results, status){
       if(status == google.maps.GeocoderStatus.OK) {
         var lat = results[0].geometry.location.lat();
         var lng = results[0].geometry.location.lng();
