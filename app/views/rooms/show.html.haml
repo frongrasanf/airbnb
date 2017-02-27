@@ -32,7 +32,7 @@
           %ul
             %i.fa.fa-bed.fa-3x{ aria: { hidden: true } }
             %li ベッド2台
-    - if current_user.id != @room.user_id
+    - if user_signed_in? && current_user.id != @room.user_id
       .room__booking
         %ul.room__booking__upper
           %li.room__booking__upper__price $82
