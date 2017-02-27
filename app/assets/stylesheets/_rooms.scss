@@ -96,6 +96,9 @@ section h1 {
   font-family: BlinkMacSystemFont;
   outline: 0;
   letter-spacing: -0.5px;
+  &:focus {
+    border-bottom: solid 1px #00a699;
+  }
 }
 
 .search__form__dates {
@@ -115,6 +118,9 @@ section h1 {
     font-family: BlinkMacSystemFont;
     outline: 0;
     letter-spacing: -0.5px;
+    &:focus {
+      border-bottom: solid 1px #00a699;
+    }
   }
 }
 
