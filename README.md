@@ -14,10 +14,12 @@
 | column                 | type         | option                          |
 |:---------------------- |:------------ |:--------------------------------|
 | title                  | string       | NOT NULL                        |
-| prefecture             | string       | NOT NULL                        |
+| city                   | string       | NOT NULL                        |
 | room_type              | string       | NOT NULL                        |
 | image                  | text         |                                 |
 | user_id                | integer      | NOT NULL & t.references :users  |
+| latitude               | float        |                                 |
+| longitude              | float        |                                 |
 
 ### *実装開始時は都道府県で登録・検索
 ### *latitude, longitudeについてはGoogle API導入時にカラム追加

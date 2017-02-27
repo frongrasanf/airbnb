@@ -16,4 +16,5 @@
 //= require moment
 //= require bootstrap-datetimepicker
 //= require moment/ja
+//= require bxslider
 //= require_tree .

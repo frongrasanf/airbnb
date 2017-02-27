@@ -5,8 +5,11 @@
 @import "./clearfix";
 @import "./variables";
 @import "./rooms";
+@import "./top_rooms";
+@import "./search_rooms";
 @import "./user";
 @import "./user_modal";
+@import "./bxslider";
 @import "font-awesome";
 
 /*
@@ -22,5 +25,6 @@
  * It is generally better to create a new file per style scope.
  *
  *= require_tree .
+ *= require bxslider
  *= require_self
  */

@@ -30,8 +30,8 @@
                 = room.title
               .user__room__container__room__info__review
           .user__room__container__booking
-            .user__room__container__booking__status 予約状況
             - if room.bookings.present?
+              .user__room__container__booking__status < 予約状況 >
               - room.bookings.each do |booking|
                 %ul.room__booking__details
                   %li.room__booking__details__user

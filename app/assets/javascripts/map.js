@@ -40,8 +40,8 @@ $(function(){
 
   // 詳細画面に地図を表示
   if ($(".room__location").length) {
-    var lat = $(".main__room__navi__location__lat").attr('data-lat');
-    var lng = $(".main__room__navi__location__lng").attr('data-lng');
+    var lat = $(".room__navi__location__lat").attr('data-lat');
+    var lng = $(".room__navi__location__lng").attr('data-lng');
 
     var centerPosition = new google.maps.LatLng(lat, lng);
     var option = {
