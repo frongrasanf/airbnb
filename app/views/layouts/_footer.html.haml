@@ -1,32 +1,38 @@
 .footer__container
-  #language__selector.footer__container__selector
-    日本語
-  #currency__selector.footer__container__selector
-    USD
-  .footer__container__section
-    %h3 Airbnb
-    %ul.footer__container__section__company
-      %li Airbnbとは
-      %li 採用情報
-      %li プレス
-      %li ポリシー
-      %li ヘルプ
-      %li ダイバーシティ&ビロンギング
-  .footer__container__section
-    %h3 スタッフのおすすめ
-    %ul.footer__container__section__recommendation
-      %li 信頼&安全
-      %li 旅行クーポン
-      %li GET!
-      %li Airbnb Citizen
-      %li 出張
-      %li ガイドブック
-  .footer__container__section
-    %h3 ホスティング
-    %ul.footer__container__section__hosting
-      %li ホストになる理由
-      %li おもてなしの心
-      %li ホストの責任
+  .row
+    .col-md-2
+      #language__selector.footer__container__selector
+        日本語
+        %i.fa.fa-angle-down{ aria: { hidden: true } }
+      #currency__selector.footer__container__selector
+        USD
+        %i.fa.fa-angle-down{ aria: { hidden: true } }
+    .row.col-md-10
+      .row
+        .footer__container__section.col-md-4
+          %h3 Airbnb
+          %ul.footer__container__section__company
+            %li Airbnbとは
+            %li 採用情報
+            %li プレス
+            %li ポリシー
+            %li ヘルプ
+            %li ダイバーシティ&ビロンギング
+        .footer__container__section.col-md-4
+          %h3 スタッフのおすすめ
+          %ul.footer__container__section__recommendation
+            %li 信頼&安全
+            %li 旅行クーポン
+            %li GET!
+            %li Airbnb Citizen
+            %li 出張
+            %li ガイドブック
+        .footer__container__section.col-md-4
+          %h3 ホスティング
+          %ul.footer__container__section__hosting
+            %li ホストになる理由
+            %li おもてなしの心
+            %li ホストの責任
   %hr.footer__divider
   .footer__table
     .footer__table__company__copy

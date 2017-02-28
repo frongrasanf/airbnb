@@ -175,9 +175,6 @@ section h1 {
   &__section {
     vertical-align: top;
     font-family: BlinkMacSystemFont;
-    display: inline-block;
-    width: 170px;
-    margin: 0 80px 0 40px;
     h3 {
       font-weight: bold;
       font-size: 15px;
@@ -192,19 +189,16 @@ section h1 {
   }
 
   &__selector {
-    height: 58px;
-    width: 176px;
     color: #484848;
+    text-align: center;
+    border: solid 1px #dce0e0;
+    border-radius: 4px;
+    margin: 0 10px 10px 0;
+    padding: 10px;
+    i {
+      margin-left: 15px;
+    }
   }
-}
-
-#language__selector {
-  float: left;
-}
-
-#currency__selector {
-  float:left;
-  clear: left;
 }
 
 hr {
