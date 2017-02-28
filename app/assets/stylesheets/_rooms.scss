@@ -17,7 +17,7 @@ html, body {
 
   &--common {
     float: left;
-    padding-left: 550px;
+    margin-left: 450px;
 
     li {
       display: inline-block;
@@ -36,6 +36,7 @@ html, body {
 
   &__user--new {
     float: right;
+    margin-right: 20px;
 
     li {
       margin: 0 15px 0 15px;
