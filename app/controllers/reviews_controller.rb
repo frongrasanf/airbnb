@@ -7,6 +7,8 @@ class ReviewsController < ApplicationController
     review = Review.new(review_params)
     if review.save
       redirect_to rooms_path
+    else
+      redirect_to user_path(current_user.id)
     end
   end
 
