@@ -1,6 +1,5 @@
 = render "layouts/header"
 
-
 .user__navi
   %ul.user__navi__menu
     %li.user__navi__manu__dashbord ダッシュボード
@@ -10,7 +9,6 @@
     %li.user__navi__manu__profile プロフィール
     %li.user__navi__manu__account アカウント
     %li.user__navi__manu__promo 旅行クーポンGET!
-
 
 .user__main
   = link_to "新しいリスティングを作成する", new_room_path, class: "user__main__create"
@@ -49,7 +47,6 @@
       .user__main__rooms__nothing
         まだリスティングしていません。
 
-
   .user__main__bookings
     - if @bookings.present?
       .user__main__bookings__index 予約一覧
@@ -79,7 +76,6 @@
     - else
       .user__main__bookings__nothing
         予約はありません。
-
 
 %footer
   = render "layouts/footer"
