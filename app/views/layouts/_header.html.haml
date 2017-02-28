@@ -44,6 +44,7 @@
           .form-group
             = f.label :password_confirmation
             = f.password_field :password_confirmation, class: "form-control", autocomplete: "off", minlength: 6, required: true
+            = f.hidden_field :super_guest, value: false
           .form-group
             = f.submit "サインアップ", class: "btn btn-pink"
         .modal-close 閉じる

@@ -44,5 +44,25 @@
               = room.title
             .top__rooms__info__review
 
+.top__reviews
+  .top__reviews__title 注目のレビュー
+  - if @reviews.present?
+    .top__reviews__container
+      - @reviews.each do |review|
+        - if review.user.super_guest
+          %ul.top__review.row
+            %li.col-md-2
+              %i.fa.fa-user.fa-4x{ aria: { hidden: true } }
+              %i.fa.fa-star-o.fa-2x{ aria: { hidden: true } }
+              .top__review__user
+                #{ review.user.name }さん
+            %li.top__review__body.col-md-8
+              = review.body
+              %br/
+              %br/
+              = review.booking.room.city
+              %br/
+              = review.created_at.strftime("%Y年%-m月")
+
 %footer
   = render "layouts/footer"

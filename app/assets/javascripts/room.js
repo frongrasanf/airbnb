@@ -7,4 +7,13 @@ $(function(){
     });
     queue : false
   });
+
+  $(".room__navi__reviews").on("click", function(){
+
+    var position = $(".room__reviews").offset().top;
+    $("html, body").animate({
+      scrollTop : position
+    });
+    queue : false
+  });
 });

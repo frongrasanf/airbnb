@@ -5,6 +5,7 @@ class RoomsController < ApplicationController
   def index
     @room = Room.new
     @rooms = Room.order('id DESC').limit(6)
+    @reviews = Review.all
   end
 
   def new
@@ -23,6 +24,7 @@ class RoomsController < ApplicationController
   def show
     @room = Room.find(params[:id])
     @booking = Booking.new
+    @reviews = @room.reviews
   end
 
   def search

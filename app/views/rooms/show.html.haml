@@ -62,6 +62,25 @@
     %br/
     .room__details__listing__contact ホストに連絡
 
+  .room__reviews
+    .room__reviews__title レビュー
+    - if @room.reviews.present?
+      .room__reviews__container
+        - @room.reviews.each do |review|
+          %ul.room__review.row
+            %li.col-md-2
+              %i.fa.fa-user.fa-4x{ aria: { hidden: true } }
+              .room__review__user
+                #{ review.user.name }さん
+            %li.room__review__body.col-md-8
+              = review.body
+              %br/
+              %br/
+              = review.created_at.strftime("%Y年%-m月")
+    - else
+      %br/
+      まだレビューはありません。
+
   .room__location
     .room__location__title エリア
     .room__location__details
