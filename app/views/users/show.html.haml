@@ -67,6 +67,8 @@
               チェックイン：#{ booking.check_in_date }
             %li.user__booking__container__details__check_out_date
               チェックアウト：#{ booking.check_out_date }
+            %li.user__booking__container__details__review
+              = link_to "レビューを書く", new_room_booking_review_path(booking.room, booking)
     - else
       .user__main__bookings__nothing
         予約はありません。
