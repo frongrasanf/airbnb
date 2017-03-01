@@ -64,15 +64,16 @@
               チェックイン：#{ booking.check_in_date }
             %li.user__booking__container__details__check_out_date
               チェックアウト：#{ booking.check_out_date }
-          .user__booking__container__details__review
-            = form_for(@review, url: room_booking_reviews_path(booking.room_id, booking)) do |f|
-              .form-group
-                .row
-                  .col-md-12
-                    = f.text_field :body, class: "form-control", placeholder: "レビューを書きましょう！", size: "30", required: true
-                    = f.hidden_field :booking_id, value: booking.id
-              .form-group
-                = f.submit "投稿する", class: "btn btn-green"
+          - if booking.check_out_date <= Time.new
+            .user__booking__container__details__review
+              = form_for(@review, url: room_booking_reviews_path(booking.room_id, booking)) do |f|
+                .form-group
+                  .row
+                    .col-md-12
+                      = f.text_field :body, class: "form-control", placeholder: "レビューを書きましょう！", size: "30", required: true
+                      = f.hidden_field :booking_id, value: booking.id
+                .form-group
+                  = f.submit "投稿する", class: "btn btn-green"
     - else
       .user__main__bookings__nothing
         予約はありません。
