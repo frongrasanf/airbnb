@@ -50,5 +50,11 @@ $(function(){
       mapTypeId : google.maps.MapTypeId.ROADMAP
     }
     var roomMap = new google.maps.Map(document.getElementById("room__map"), option);
+    var circle = new google.maps.Circle({
+      center: new google.maps.LatLng(lat, lng),
+      map: roomMap,
+      radius: 500,
+      fillColor: "pink"
+    });
   }
 });
