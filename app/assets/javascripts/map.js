@@ -4,8 +4,8 @@ $(function(){
   var hidden_keyword = $(".search__result__container__index");
   if (hidden_keyword.length) {
     var geocoder = new google.maps.Geocoder();
-    var location = hidden_keyword.attr('data-location');
-    geocoder.geocode({ 'address': location,'language':'ja' }, function(results, status){
+    var location = hidden_keyword.attr("data-location");
+    geocoder.geocode({ "address": location,"language": "ja" }, function(results, status){
       if (status == google.maps.GeocoderStatus.OK) {
         var latlng = results[0].geometry.location;
         var mapOpt = {
@@ -13,7 +13,7 @@ $(function(){
           zoom: 15,
           mapTypeId: google.maps.MapTypeId.ROADMAP
         };
-        var map = new google.maps.Map(document.getElementById('map-canvas'),mapOpt);
+        var map = new google.maps.Map(document.getElementById("map-canvas"),mapOpt);
       }else {
         alert("Geocode was not successful for the following reason: " + status);
       }
@@ -26,7 +26,7 @@ $(function(){
     var input = document.getElementById("location__input");
     var word = input.value;
     var geocoder = new google.maps.Geocoder();
-    geocoder.geocode({'address': word }, function(results, status){
+    geocoder.geocode({"address": word }, function(results, status){
       if(status == google.maps.GeocoderStatus.OK) {
         var lat = results[0].geometry.location.lat();
         var lng = results[0].geometry.location.lng();
@@ -40,8 +40,8 @@ $(function(){
 
   // 詳細画面に地図を表示
   if ($(".room__location").length) {
-    var lat = $(".room__navi__location__lat").attr('data-lat');
-    var lng = $(".room__navi__location__lng").attr('data-lng');
+    var lat = $(".room__navi__location__lat").attr("data-lat");
+    var lng = $(".room__navi__location__lng").attr("data-lng");
 
     var centerPosition = new google.maps.LatLng(lat, lng);
     var option = {
