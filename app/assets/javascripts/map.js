@@ -15,7 +15,7 @@ $(function(){
         };
         var map = new google.maps.Map(document.getElementById("map-canvas"),mapOpt);
       }else {
-        alert("Geocode was not successful for the following reason: " + status);
+        alert("地名が入力されなかった為、検索できませんでした。");
       }
     });
   }

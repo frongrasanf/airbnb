@@ -39,7 +39,7 @@ gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
 
 gem 'momentjs-rails', '~> 2.17', '>= 2.17.1'
 
-gem 'bootstrap3-datetimepicker-rails', '~> 4.17', '>= 4.17.43'
+gem 'bootstrap-datepicker-rails', '~> 1.6', '>= 1.6.4.1'
 
 gem 'devise', '~> 4.2'
 
