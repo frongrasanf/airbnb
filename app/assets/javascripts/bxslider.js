@@ -1,8 +1,12 @@
 $(function(){
-  $('.bxslider').bxSlider({
+  $(".bxslider").bxSlider({
     auto: false,
-    slideWidth: 1080,
+    slideWidth: 360,
     minSlides: 3,
-    maxSlides: 3
+    maxSlides: 3,
+    moveSlides: 1,
+    slideMargin: 5,
+    hideControlOnEnd: true,
+    controls: true,
   });
 });

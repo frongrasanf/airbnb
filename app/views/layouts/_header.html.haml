@@ -10,15 +10,15 @@
       %li メッセージ
       %li ヘルプ
     .header__container__user--exist.dropdown
-      %a{ src: "#", data: { toggle: "dropdown", type:  "button" } }
+      %a{ src: "#", data: { toggle: "dropdown", type: "button" } }
         = current_user.name
         %span.caret
-      %ul.dropdown-menu
+      %ul.dropdown-menu.dropdown-menu-right
         %li
-        = link_to "マイページ", "/users/#{ current_user.id }"
+          = link_to "マイページ", "/users/#{ current_user.id }"
         %li.divider
         %li
-        = link_to "サインアウト", destroy_user_session_path
+          = link_to "サインアウト", destroy_user_session_path
   - else
     %ul.header__container--common
       %li ホストになる
@@ -37,9 +37,6 @@
             = f.email_field :email, class: "form-control", required: true
           .form-group
             = f.label :password
-            - if @minimum_password_length
-              %em
-                (#{@minimum_password_length} characters minimum)
             = f.password_field :password, class: "form-control", autocomplete: "off", type: "password", minlength: 6, required: true
           .form-group
             = f.label :password_confirmation
@@ -58,9 +55,6 @@
             = f.email_field :email, class: "form-control", autofocus: true
           .form-group
             = f.label :password
-            - if @minimum_password_length
-              %em
-                (#{@minimum_password_length} characters minimum)
             = f.password_field :password, class: "form-control", autocomplete: "off"
           .form-group
             = f.submit "サインイン", class: "btn btn-pink"

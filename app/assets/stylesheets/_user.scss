@@ -1,6 +1,6 @@
 .user__navi {
   width: 100%;
-  background-color: #484848;
+  background-color: $textGray;
   color: white;
   height: 40px;
 
@@ -17,6 +17,7 @@
 }
 
 .user__main {
+  @include clearfix();
   padding: 50px 150px;
   width: 100%;
 
@@ -72,7 +73,7 @@
 .user__room__container {
   @include clearfix();
   margin: 30px;
-  border: 1px solid #dce0e0;
+  border: 1px solid $mainGray;
   border-radius: 5px;
 
   &__room {
@@ -111,7 +112,7 @@
 }
 
 .room__booking__details {
-  border: 1px solid #dce0e0;
+  border: 1px solid $mainGray;
   border-radius: 5px;
   padding: 10px;
 
@@ -123,7 +124,7 @@
 .user__booking__container {
   @include clearfix();
   margin: 30px;
-  border: 1px solid #dce0e0;
+  border: 1px solid $mainGray;
   border-radius: 5px;
   padding: 10px;
 
@@ -144,7 +145,7 @@
 
   &__details {
     float: left;
-    border: 1px solid #dce0e0;
+    border: 1px solid $mainGray;
     border-radius: 5px;
     padding: 15px;
   }

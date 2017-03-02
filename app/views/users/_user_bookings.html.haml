@@ -1,0 +1,29 @@
+- if @bookings.present?
+  .user__main__bookings__index 予約一覧
+  - @bookings.each do |booking|
+    .user__booking__container
+      .user__booking__container__room
+        = link_to room_path(booking.room) do
+          %img{ src: booking.room.image, class: "user__booking__container__room__image" }
+        .user__booking__container__room__title
+          = booking.room.title
+      %ul.user__booking__container__details
+        %li.user__booking__container__details__stay_days
+          宿泊日数：#{ booking.stay_days }
+        %li.user__booking__container__details__check_in_date
+          チェックイン：#{ booking.check_in_date }
+        %li.user__booking__container__details__check_out_date
+          チェックアウト：#{ booking.check_out_date }
+      - if booking.check_out_date <= Date.today
+        .user__booking__container__details__review
+          = form_for(@review, url: room_booking_reviews_path(booking.room_id, booking)) do |f|
+            .form-group
+              .row
+                .col-md-12
+                  = f.text_field :body, class: "form-control", placeholder: "レビューを書きましょう！", size: "30", required: true
+                  = f.hidden_field :booking_id, value: booking.id
+            .form-group
+              = f.submit "投稿する", class: "btn btn-green"
+- else
+  .user__main__bookings__nothing
+    予約はありません。

@@ -1,7 +1,7 @@
 .search__navi {
   @include clearfix();
-  border-top: 1px solid #dce0e0;
-  border-bottom: 1px solid #dce0e0;
+  border-top: 1px solid $mainGray;
+  border-bottom: 1px solid $mainGray;
   line-height: 48px;
   height: 48px;
 
@@ -10,7 +10,7 @@
   }
 
   &__input {
-    border-right: 1px solid #dce0e0;
+    border-right: 1px solid $mainGray;
     padding: 0 15px;
 
     &__arrow {
@@ -26,14 +26,14 @@
   &__wrapper {
 
     ul {
-      border-right: 1px solid #dce0e0;
+      border-right: 1px solid $mainGray;
       padding: 0 15px;
     }
 
     li {
       list-style: none;
       display: inline-block;
-      color: #484848;
+      color: $textGray;
     }
   }
 }
@@ -50,11 +50,11 @@
 
     &__index {
       padding: 10px 10px 0 50px;
-      color: #767676;
+      color: $footerGray;
       width: 100%;
       position: fixed;
       background-color: white;
-      border-bottom: 1px solid #dce0e0;
+      border-bottom: 1px solid $mainGray;
     }
     p {
       margin: 10px 0;
@@ -83,11 +83,11 @@
   display: inline-block;
   float: left;
   margin: 0 0 20px 50px;
-  color: #484848;
+  color: $textGray;
   font-weight: 200;
   font-size: 14px;
   &:hover {
-    color: #484848;
+    color: $textGray;
     text-decoration: none;
   }
 
