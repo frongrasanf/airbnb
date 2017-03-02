@@ -30,8 +30,19 @@
           .user__room__container__booking
             - if room.bookings.present?
               - room.bookings.each do |booking|
-                - if booking.check_out_date >= Time.new
+                - if booking.check_out_date >= Date.today
                   .user__room__container__booking__status < 予約あり >
+                  %ul.room__booking__details
+                    %li.room__booking__details__user
+                      宿泊者：#{ booking.user.name }さん
+                    %li.room__booking__details__stay_days
+                      宿泊日数：#{ booking.stay_days }日
+                    %li.room__booking__details__check_in_date
+                      チェックイン：#{ booking.check_in_date }
+                    %li.room__booking__details__check_out_date
+                      チェックアウト：#{ booking.check_out_date }
+                - else
+                  .user__room__container__booking__status < チェックアウト済み >
                   %ul.room__booking__details
                     %li.room__booking__details__user
                       宿泊者：#{ booking.user.name }さん
@@ -65,7 +76,7 @@
               チェックイン：#{ booking.check_in_date }
             %li.user__booking__container__details__check_out_date
               チェックアウト：#{ booking.check_out_date }
-          - if booking.check_out_date <= Time.new
+          - if booking.check_out_date <= Date.today
             .user__booking__container__details__review
               = form_for(@review, url: room_booking_reviews_path(booking.room_id, booking)) do |f|
                 .form-group
