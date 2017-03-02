@@ -17,6 +17,7 @@
 }
 
 .user__main {
+  @include clearfix();
   padding: 50px 150px;
   width: 100%;
 
