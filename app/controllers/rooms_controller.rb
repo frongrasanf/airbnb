@@ -13,9 +13,11 @@ class RoomsController < ApplicationController
   end
 
   def create
+    user = current_user
     room = Room.new(room_params)
     if room.save
       redirect_to root_path
+      UserMailer.registration(user).deliver
     else
       redirect_to new_room_path
     end

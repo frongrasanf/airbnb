@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, controllers: { registrations: 'users/registrations' }
   root 'rooms#index'
   resources :rooms do
     resources :bookings, only: :create do

@@ -1,10 +1,10 @@
 class UserMailer < ApplicationMailer
 
-  def registration
-    @greeting = "Hi"
+  def registration(user)
+    @name = user.name
 
     mail(
-      to: ENV['SAMPLE_ADDRESS'],
+      to: user.email,
       subject: "会員登録完了のお知らせ"
     ) do |format|
       format.html
