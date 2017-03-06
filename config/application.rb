@@ -8,6 +8,7 @@ Bundler.require(*Rails.groups)
 
 module Airbnb
   class Application < Rails::Application
+    config.i18n.default_locale = :ja
     config.time_zone = 'Tokyo'
     config.active_record.default_timezone = :local
     config.autoload_paths += %W(#{config.root}/lib)

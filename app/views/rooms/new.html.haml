@@ -22,6 +22,11 @@
       .row
         .col-md-4
           = f.text_field :title, class: "form-control", placeholder: "タイトルをつけてください", required: true
+    -if @room.errors.any?
+      %ul
+        - @room.errors.full_messages.each do |message|
+          %li#error_explanation #{ message }
+    %br/
     .form-group
       = f.label :image, "写真を載せましょう（最大容量1MB）"
       .row
