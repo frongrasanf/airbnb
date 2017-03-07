@@ -14,7 +14,7 @@
           チェックイン：#{ booking.check_in_date }
         %li.user__booking__container__details__check_out_date
           チェックアウト：#{ booking.check_out_date }
-      - if booking.check_out_date <= Date.today
+      - if booking.check_out_date <= Date.today && booking.reviews.empty?
         .user__booking__container__details__review
           = form_for(@review, url: room_booking_reviews_path(booking.room_id, booking)) do |f|
             .form-group
