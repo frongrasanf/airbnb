@@ -1,4 +1,7 @@
 class UsersController < ApplicationController
+
+  before_action :authenticate_user!, only: [:show]
+
   def show
     @user = User.new
     @rooms = current_user.rooms.order('id DESC')

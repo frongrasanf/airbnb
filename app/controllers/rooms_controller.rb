@@ -1,6 +1,7 @@
 class RoomsController < ApplicationController
 
   before_action :set_new_user, except: %i[new create]
+  before_action :authenticate_user!, only: [:new]
 
   def index
     @room = Room.new
