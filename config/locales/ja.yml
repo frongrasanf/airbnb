@@ -1,0 +1,16 @@
+ja:
+  activerecord:
+    attributes:
+      room:
+        image: "写真"
+    errors:
+      models:
+        room:
+          attributes:
+            image:
+              blank: "は空ではいけません。"
+
+  errors:
+    messages:
+      size_too_big: "のサイズが大きすぎます。1MB以下に設定してください。"
+      extension_whitelist_error: "の拡張子はjpg, jpeg, gif, pngに設定してください。"
