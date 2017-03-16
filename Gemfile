@@ -53,7 +53,9 @@ gem 'geocoder', '~> 1.4', '>= 1.4.3'
 
 gem 'geokit-rails', '~> 2.2'
 
-gem 'sidekiq', '~> 4.2', '>= 4.2.9'
+gem 'delayed_job'
+
+gem 'delayed_job_active_record'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
