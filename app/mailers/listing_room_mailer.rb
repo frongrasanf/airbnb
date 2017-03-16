@@ -1,0 +1,2 @@
+class ListingRoomMailer < ApplicationMailer
+end
