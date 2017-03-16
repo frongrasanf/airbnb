@@ -53,6 +53,8 @@ gem 'geocoder', '~> 1.4', '>= 1.4.3'
 
 gem 'geokit-rails', '~> 2.2'
 
+gem 'sidekiq', '~> 4.2', '>= 4.2.9'
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
