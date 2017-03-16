@@ -17,7 +17,7 @@ class RoomsController < ApplicationController
     room = Room.new(room_params)
     if room.save
       redirect_to root_path
-      UserMailer.registration(user).deliver
+      ListingRoomMailer.listing(user).deliver
     else
       redirect_to new_room_path
     end
