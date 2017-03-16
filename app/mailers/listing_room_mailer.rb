@@ -1,6 +1,8 @@
 class ListingRoomMailer < ApplicationMailer
-  def listing(user)
+  def listing(user, room)
     @name = user.name
+    @title = room.title
+    @city = room.city
 
     mail(
       to: user.email,
